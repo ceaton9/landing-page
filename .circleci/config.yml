@@ -5,9 +5,8 @@ executors:
       - image: circleci/node:16
 commands:
   gatsby-build:
-     steps:
+    steps:
       - checkout
- 
       - restore_cache:
           keys:
             - npm-cache-{{ checksum "./package-lock.json" }}
