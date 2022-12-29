@@ -2,7 +2,12 @@ version: 2.1
 executors:
   node-executor:
     docker:
-      - image: circleci/node:18
+      - image: "cimg/base:stable"
+    steps:
+      - checkout
+      - node/install:
+          install-yarn: true
+          node-version: "18.12.0"
 commands:
   gatsby-build:
     steps:
