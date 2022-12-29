@@ -2,14 +2,12 @@ version: 2.1
 executors:
   node-executor:
     docker:
-      - image: "cimg/base:stable"
+      - image: "cimg/node:18.12.0"
 
 commands:
   gatsby-build:
     steps:
       - checkout
-      - node/install:
-          node-version: "18.12.0"
       - restore_cache:
           keys:
             - npm-cache-{{ checksum "./package-lock.json" }}
