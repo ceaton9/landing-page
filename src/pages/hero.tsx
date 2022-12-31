@@ -7,17 +7,17 @@ interface HeroProps {
 }
 
 export default function Hero(props: HeroProps) {
-  const lastWord = useMemo(
-    () => props.headline.split(" ").pop(),
-    [props.headline]
-  );
+  const lastWord = useMemo(() => {
+    if (!props.headline) props.headline;
+    return props.headline?.split(" ").pop();
+  }, [props.headline]);
 
   const headline = useMemo(() => {
-    const lastIndexOfSpace = props.headline.lastIndexOf(" ");
+    const lastIndexOfSpace = props.headline?.lastIndexOf(" ");
     if (lastIndexOfSpace === -1) {
       return props.headline;
     }
-    return props.headline.substring(0, lastIndexOfSpace);
+    return props.headline?.substring(0, lastIndexOfSpace);
   }, [props.headline]);
   return (
     <section className="flex px-24 pt-24">
