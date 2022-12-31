@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero renders correctly 1`] = `
+<section
+  className="flex px-24 pt-24"
+>
+  <section
+    className="w-4/6 mr-36"
+  >
+    <p
+      className="text-sm text-[#C4C4C4]"
+    >
+      BUSINESS BOOST
+    </p>
+    <h1
+      className="text-white text-[56px] "
+    >
+      Get Smart Solutions For Your Business with 
+      <span
+        className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#DD31D1] via-[#8343DA] to-[#3D84E7]"
+      >
+        GROOVE.
+      </span>
+    </h1>
+    <p
+      className="text-white opacity-70"
+    >
+      We're bringing digital creators, Solving problems with unique and creative system for your business
+    </p>
+  </section>
+  <section
+    className="w-3/6"
+  >
+    <div
+      className="bg-teal-300 w-full h-full"
+    />
+  </section>
+</section>
+`;

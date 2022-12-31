@@ -1,3 +1,8 @@
+/**
+ * @author Groove Studio
+ * @copyright © All rights reserved. Groove Studio 2023
+ */
+
 import React, { useMemo } from "react";
 
 interface HeroProps {
