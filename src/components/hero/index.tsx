@@ -4,6 +4,9 @@
  */
 
 import React, { useMemo } from "react";
+import heroImage from "@assets/hero-image.png";
+
+import "./style.css"
 
 interface HeroProps {
   headline: string;
@@ -24,19 +27,21 @@ export default function Hero(props: HeroProps) {
   }, [props.headline]);
 
   return (
-    <section className="flex px-24 pt-24">
-      <section className="w-4/6 mr-36">
-        <p className="text-sm text-[#C4C4C4]">{props.miniHeadline}</p>
+    <section id="hero" about="hero" className="flex pt-24">
+      <section id="description" className="w-3/6 pl-24 mr-12">
+        <p className="text-sm text-[#C4C4C4] mb-4">{props.miniHeadline}</p>
         <h1 className="text-white text-[56px] ">
           {headline.concat(" ")}
           <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#DD31D1] via-[#8343DA] to-[#3D84E7]">
             {lastWord}
           </span>
         </h1>
-        <p className="text-white opacity-70">{props.headlineDescription}</p>
+        <p className="text-white opacity-70 w-5/6">{props.headlineDescription}</p>
       </section>
-      <section className="w-3/6">
-        <div className="bg-teal-300 w-full h-full"></div>
+      <section about="showcase-image" className="w-3/6">
+        <div className="w-full h-full">
+          <img src={heroImage} alt="showcase-image" />
+        </div>
       </section>
     </section>
   );

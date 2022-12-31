@@ -2,16 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Cerebri Sans;
+  font-weight: normal;
+  src: url("../assets/fonts/CerebriSansPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: Cerebri Sans;
+  font-weight: bold;
+  src: url("../assets/fonts/CerebriSansPro-Bold.ttf");
+}
+
+@font-face {
+  font-family: Cerebri Sans;
+  font-weight: normal;
+  font-style: italic;
+  src: url("../assets/fonts/CerebriSansPro-Italic.ttf");
+}
+
+@font-face {
+  font-family: Cerebri Sans;
+  font-weight: bold;
+  font-style: italic;
+  src: url("../assets/fonts/CerebriSansPro-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: Cerebri Sans;
+  font-weight: 400;
+  src: url("../assets/fonts/CerebriSansPro-Medium.ttf");
+}
+
+@font-face {
+  font-family: Cerebri Sans;
+  font-weight: 300;
+  src: url("../assets/fonts/CerebriSansPro-Light.ttf");
+}
+
+@font-face {
+  font-family: Cerebri Sans;
+  font-weight: 500;
+  src: url("../assets/fonts/CerebriSansPro-SemiBold.ttf");
+}
+
 body {
-    background-color: #06132D;
+  background-color: #06132d;
+  font-family: "Cerebri Sans";
 }
 
 .gradient-text {
-background-clip: text;
--webkit-background-clip: text;
-color: transparent
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .gradient {
-    background: linear-gradient(90deg, #DD31D1 0%, #8343DA 51.56%, #3D84E7 100%);
+  background: linear-gradient(90deg, #dd31d1 0%, #8343da 51.56%, #3d84e7 100%);
 }

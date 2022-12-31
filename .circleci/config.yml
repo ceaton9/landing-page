@@ -23,7 +23,7 @@ commands:
             - gatsby-public-cache-{{ .Branch }}
       - run:
          name: Gatsby Test
-         command: npm run unit:test
+         command: npm run test:unit
       - run:
           name: Gatsby Build
           command: GATSBY_CPU_COUNT=2 npm --prefix . run-script build
