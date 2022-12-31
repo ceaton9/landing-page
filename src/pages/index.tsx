@@ -1,6 +1,11 @@
+/**
+ * @author Groove Studio
+ * @copyright © All rights reserved. Groove Studio 2023
+ */
+
 import React from "react";
-import { LANG } from "../utils/lang";
-import Hero from "./hero";
+import Hero from "@components/hero";
+import { LANG } from "@utils/lang";
 
 export default function Index() {
   return (

@@ -12,6 +12,16 @@ const config: GatsbyConfig = {
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-postcss",
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@components": "src/components",
+          "@utils": "src/utils",
+        },
+        extensions: [],
+      },
+    },
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
