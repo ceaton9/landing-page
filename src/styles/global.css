@@ -5,3 +5,13 @@
 body {
     background-color: #06132D;
 }
+
+.gradient-text {
+background-clip: text;
+-webkit-background-clip: text;
+color: transparent
+}
+
+.gradient {
+    background: linear-gradient(90deg, #DD31D1 0%, #8343DA 51.56%, #3D84E7 100%);
+}
