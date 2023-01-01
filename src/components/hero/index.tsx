@@ -6,7 +6,8 @@
 import React, { useMemo } from "react";
 import heroImage from "@assets/hero-image.png";
 
-import "./style.css"
+import "./style.css";
+import Button from "@components/button";
 
 interface HeroProps {
   headline: string;
@@ -36,7 +37,13 @@ export default function Hero(props: HeroProps) {
             {lastWord}
           </span>
         </h1>
-        <p className="text-white opacity-70 w-5/6">{props.headlineDescription}</p>
+        <p className="text-white opacity-70 w-5/6">
+          {props.headlineDescription}
+        </p>
+        <div className="flex gap-7">
+          <Button primary>Shoot us project</Button>
+          <Button>Explore Now</Button>
+        </div>
       </section>
       <section about="showcase-image" className="w-3/6">
         <div className="w-full h-full">

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .bg-gradient {
+    @apply bg-gradient-to-r from-[#DD31D1] via-[#8343DA] to-[#3D84E7]
+  }
+}
+
 @font-face {
   font-family: Cerebri Sans;
   font-weight: normal;
@@ -52,11 +58,13 @@ body {
 }
 
 .gradient-text {
+  background: linear-gradient(90deg, #DD31D1 0%, #8343DA 47.92%, #3D84E7 100%);
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
-.gradient {
-  background: linear-gradient(90deg, #dd31d1 0%, #8343da 51.56%, #3d84e7 100%);
+.card-bg {
+  background: #071736;
 }
+
