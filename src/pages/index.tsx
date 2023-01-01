@@ -8,6 +8,7 @@ import Hero from "@components/hero";
 import { LANG } from "@utils/lang";
 import Services from "@components/services";
 import Footer from "@components/footer";
+import Testimonials from "@components/testimonials";
 
 export default function Index() {
   return (
@@ -18,6 +19,7 @@ export default function Index() {
         headlineDescription={LANG.HEADLINE_DESC}
       />
       <Services />
+      <Testimonials />
       <Footer />
     </>
   );
