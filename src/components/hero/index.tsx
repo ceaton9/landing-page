@@ -28,7 +28,7 @@ export default function Hero(props: HeroProps) {
   }, [props.headline]);
 
   return (
-    <section id="hero" about="hero" className="flex pt-24">
+    <section id="hero" about="hero" className="flex">
       <section id="description" className="w-3/6 pl-24 mr-12">
         <p className="text-sm text-[#C4C4C4] mb-4">{props.miniHeadline}</p>
         <h1 className="text-white text-[56px] ">
@@ -40,7 +40,7 @@ export default function Hero(props: HeroProps) {
         <p className="text-white opacity-70 w-5/6">
           {props.headlineDescription}
         </p>
-        <div className="flex gap-7">
+        <div className="flex gap-7 mt-6">
           <Button primary>Shoot us project</Button>
           <Button>Explore Now</Button>
         </div>

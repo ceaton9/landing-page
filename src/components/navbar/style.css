@@ -1,0 +1,10 @@
+#navbar #left h1 {
+  background: linear-gradient(90deg, #dd31d1 0%, #8343da 50.52%, #3d84e7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+}
