@@ -24,7 +24,7 @@ export default function Navbar({ logo }: NavbarProps) {
       className="flex items-center justify-between px-24 pt-12 pb-12"
     >
       <div id="left">
-        <h1 className="text-lg">{logo}</h1>
+        <h1 className="gradient-text">{logo}</h1>
       </div>
       <div id="center" className="flex">
         {linkLocal.map(({ href, id, title, selected }) => (

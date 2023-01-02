@@ -4,12 +4,14 @@
  */
 
 import React from "react";
+
 import Hero from "@components/hero";
 import { LANG } from "@utils/lang";
 import Services from "@components/services";
 import Footer from "@components/footer";
 import Navbar from "@components/navbar";
 import Testimonials from "@components/testimonials";
+import OurProject from "@components/ourProject";
 
 export default function Index() {
   return (
@@ -21,6 +23,7 @@ export default function Index() {
         headlineDescription={LANG.HEADLINE_DESC}
       />
       <Services />
+      <OurProject />
       <Testimonials />
       <Footer />
     </>

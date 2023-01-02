@@ -13,6 +13,14 @@ const config: GatsbyConfig = {
     "gatsby-plugin-image",
     "gatsby-plugin-postcss",
     {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.svg$/, // See below to configure properly
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
