@@ -1,11 +1,17 @@
 import React from "react";
 
+import Star from "@assets/star.svg";
+
 export default function TestimonialCard() {
   return (
     <div className="w-1/3 card-bg h-64 p-6">
       <div className="flex items-center justify-between">
         <div className="flex">
-          <div className="w-14 h-14 rounded-full bg-slate-300"></div>
+          <img
+            className="w-14 h-14 rounded-full"
+            src="https://ui-avatars.com/api/?background=random&name=Sackie+Jones+Rio"
+            alt="avatar"
+          />
           <div className="text-white pl-6">
             <h4 className="text-xl">Sackie Jones Rio</h4>
             <p className="text-sm font-light opacity-70">
@@ -14,7 +20,7 @@ export default function TestimonialCard() {
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 bg-teal-200"></div>
+          <Star />
           <p className="text-white">4.8</p>
         </div>
       </div>

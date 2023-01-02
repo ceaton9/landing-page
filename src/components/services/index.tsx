@@ -10,7 +10,12 @@ export default function Services() {
       <div className="flex gap-10 h-[538px] mt-6 mb-6">
         <ServiceCard
           cardTitle="Mobile & Development"
-          cardImage={<div className="w-full h-64 bg-slate-300"></div>}
+          cardImage={
+            <img
+              src="https://picsum.photos/id/1/450/350?grayscale"
+              alt="attachment-1"
+            />
+          }
         >
           We can make you a mobile application using tech stack as u request or
           we decide what to use to build your idea. It is guaranteed that we
@@ -18,7 +23,9 @@ export default function Services() {
         </ServiceCard>
         <ServiceCard
           cardTitle="UI/UX Design"
-          cardImage={<div className="w-full h-64 bg-slate-300"></div>}
+          cardImage={
+            <img src="https://picsum.photos/id/2/450/350" alt="attachment-2" />
+          }
         >
           We can make you a mobile application using tech stack as u request or
           we decide what to use to build your idea. It is guaranteed that we
@@ -26,7 +33,12 @@ export default function Services() {
         </ServiceCard>
         <ServiceCard
           cardTitle="Illustration"
-          cardImage={<div className="w-full h-64 bg-slate-300"></div>}
+          cardImage={
+            <img
+              src="https://picsum.photos/id/3/450/350?grayscale"
+              alt="attachment-3"
+            />
+          }
         >
           We can make you a mobile application using tech stack as u request or
           we decide what to use to build your idea. It is guaranteed that we
