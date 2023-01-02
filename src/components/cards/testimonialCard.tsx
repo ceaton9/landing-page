@@ -24,7 +24,6 @@ export default function TestimonialCard() {
           <p className="text-white">4.8</p>
         </div>
       </div>
-
       <p className="text-white opacity-70 font-light pt-12">
         "Platform NFT marketplace terbaik yang miliknya pengguna mendapatkan
         banyak manfaat dan banyak bermunculan seperti pasar sebagus RAINFTB
