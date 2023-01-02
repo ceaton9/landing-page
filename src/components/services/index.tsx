@@ -1,12 +1,12 @@
-import ServiceCard from "@components/cards/serviceCard";
-import LineBreak from "@components/lineBreak";
 import React from "react";
+
+import ServiceCard from "@components/cards/serviceCard";
+import HeaderSection from "@components/headerSection";
 
 export default function Services() {
   return (
     <section id="services" about="services" className="px-24">
-      <h1 className="text-white text-xl mb-8">The Service we do,</h1>
-      <LineBreak />
+      <HeaderSection title="The Service we do," />
       <div className="flex gap-10 h-[538px] mt-6 mb-6">
         <ServiceCard
           cardTitle="Mobile & Development"
