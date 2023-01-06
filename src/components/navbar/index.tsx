@@ -44,7 +44,9 @@ export default function Navbar({ logo }: NavbarProps) {
         ))}
       </div>
       <div id="right">
-        <Button primary>Shoot us project</Button>
+        <Button primary>
+          <Link to="/projectForm/">Shoot Us Project</Link>
+        </Button>
       </div>
     </section>
   );

@@ -19,6 +19,7 @@
     "test:unit:watch": "npm run test:unit -- --watch"
   },
   "dependencies": {
+    "formik": "^2.2.9",
     "gatsby": "^5.3.3",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-google-gtag": "^5.3.0",
@@ -31,7 +32,8 @@
     "gatsby-transformer-sharp": "^5.3.1",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.18.6",

@@ -2,7 +2,7 @@ import React from "react";
 
 interface ButtonProps {
   primary?: boolean;
-  children: string;
+  children: string | React.ReactNode;
 }
 
 export default function Button(props: ButtonProps) {
