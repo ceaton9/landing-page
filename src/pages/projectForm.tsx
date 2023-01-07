@@ -2,7 +2,7 @@ import Button from "@components/button";
 import Footer from "@components/footer";
 import Navbar from "@components/navbar";
 import { LANG } from "@utils/lang";
-import { ErrorMessage, Field, Form, Formik } from "formik";
+import { Formik } from "formik";
 import React from "react";
 import * as Yup from "yup";
 
@@ -43,9 +43,14 @@ export default function ProjectForm() {
           <div className="h-60 rounded-xl mb-12 w-1/2 mt-40 flex-col">
             <Formik
               initialValues={{
+                name: "",
+                company: "",
                 email: "",
+                type: [],
+                timeline: "",
+                budget: 0,
+                description: 0,
               }}
-              validationSchema={FormProjectsSchema}
               onSubmit={(values) => {
                 // same shape as initial values
                 console.log(values);
@@ -61,37 +66,36 @@ export default function ProjectForm() {
                 handleBlur,
                 handleSubmit,
                 handleReset,
+                setFieldValue,
               }) => (
                 <form onSubmit={handleSubmit}>
                   <label
-                    htmlFor="email"
+                    htmlFor="name"
                     style={{ display: "block" }}
                     className="text-white mb-2"
                   >
                     What's your name*
                   </label>
                   <input
-                    id="email"
-                    placeholder="Enter your email"
+                    id="name"
                     type="text"
-                    value={values.email}
+                    value={values.name}
                     onChange={handleChange}
                     style={{ width: "100%" }}
                     onBlur={handleBlur}
                     className="bg-transparent border-[#FFFFFF80] border-[1px] h-10 text-white px-4 mb-4"
                   />
                   <label
-                    htmlFor="company-name"
+                    htmlFor="company"
                     style={{ display: "block" }}
                     className="text-white mb-2"
                   >
                     Name of your company/organization
                   </label>
                   <input
-                    id="company-name"
-                    placeholder="Enter your email"
+                    id="company"
                     type="text"
-                    value={values.email}
+                    value={values.company}
                     onChange={handleChange}
                     style={{ width: "100%" }}
                     onBlur={handleBlur}
@@ -106,7 +110,6 @@ export default function ProjectForm() {
                   </label>
                   <input
                     id="email"
-                    placeholder="Enter your email"
                     type="text"
                     value={values.email}
                     onChange={handleChange}
@@ -115,81 +118,214 @@ export default function ProjectForm() {
                     className="bg-transparent border-[#FFFFFF80] border-[1px] h-10 text-white px-4 mb-4"
                   />
                   <label
-                    htmlFor="email"
+                    htmlFor="type"
                     style={{ display: "block" }}
                     className="text-white mb-2"
                   >
                     Type's of work?*
                   </label>
-                  <div className="text-white">
-                    <label>
-                      <input type="checkbox" />
-                      Mobile App
-                    </label>
-                    <label>
-                      <input type="checkbox" />
-                      Mobile App
-                    </label>
-                    <label>
-                      <input type="checkbox" />
-                      Mobile App
-                    </label>
-                    <label>
-                      <input type="checkbox" />
-                      Mobile App
-                    </label>
+                  <div className="text-white mb-6 flex gap-4 flex-wrap">
+                    <div id="type-button" className="pt-6">
+                      <label>
+                        <input
+                          type="checkbox"
+                          className="hidden"
+                          onClick={() =>
+                            setFieldValue("type", [
+                              ...values.type,
+                              "mobile-app",
+                            ])
+                          }
+                        />
+                        <span className="px-4 py-4 border-[1px] border-white font-light text-sm">
+                          Mobile App
+                        </span>
+                      </label>
+                    </div>
+                    <div id="type-button" className="pt-6">
+                      <label>
+                        <input
+                          type="checkbox"
+                          className="hidden"
+                          onClick={() =>
+                            setFieldValue("type", [
+                              ...values.type,
+                              "dashboard-development",
+                            ])
+                          }
+                        />
+                        <span className="px-4 py-4 border-[1px] border-white font-light text-sm">
+                          Dashboard Development
+                        </span>
+                      </label>
+                    </div>
+                    <div id="type-button" className="pt-6">
+                      <label>
+                        <input
+                          type="checkbox"
+                          className="hidden"
+                          onClick={() =>
+                            setFieldValue("type", [
+                              ...values.type,
+                              "web-development",
+                            ])
+                          }
+                        />
+                        <span className="px-4 py-4 border-[1px] border-white font-light text-sm">
+                          Web Development
+                        </span>
+                      </label>
+                    </div>
+                    <div id="type-button" className="pt-6">
+                      <label>
+                        <input
+                          type="checkbox"
+                          className="hidden"
+                          onClick={() =>
+                            setFieldValue("type", [
+                              ...values.type,
+                              "landing-page-dev",
+                            ])
+                          }
+                        />
+                        <span className="px-4 py-4 border-[1px] border-white font-light text-sm">
+                          Landing Page Development
+                        </span>
+                      </label>
+                    </div>
+                    <div id="type-button" className="pt-6">
+                      <label>
+                        <input
+                          type="checkbox"
+                          className="hidden"
+                          onClick={() =>
+                            setFieldValue("type", [
+                              ...values.type,
+                              "graphic-design",
+                            ])
+                          }
+                        />
+                        <span className="px-4 py-4 border-[1px] border-white font-light text-sm">
+                          Graphic Design
+                        </span>
+                      </label>
+                    </div>
+                    <div id="type-button" className="pt-6">
+                      <label>
+                        <input
+                          type="checkbox"
+                          className="hidden"
+                          onClick={() =>
+                            setFieldValue("type", [
+                              ...values.type,
+                              "dashboard-design",
+                            ])
+                          }
+                        />
+                        <span className="px-4 py-4 border-[1px] border-white font-light text-sm">
+                          Dashboard Design
+                        </span>
+                      </label>
+                    </div>
+                    <div id="type-button" className="pt-6">
+                      <label>
+                        <input
+                          type="checkbox"
+                          className="hidden"
+                          onClick={() =>
+                            setFieldValue("type", [
+                              ...values.type,
+                              "app-design",
+                            ])
+                          }
+                        />
+                        <span className="px-4 py-4 border-[1px] border-white font-light text-sm">
+                          App Design
+                        </span>
+                      </label>
+                    </div>
+                    <div id="type-button" className="pt-6">
+                      <label>
+                        <input
+                          type="checkbox"
+                          className="hidden"
+                          onClick={() =>
+                            setFieldValue("type", [
+                              ...values.type,
+                              "landing-page-design",
+                            ])
+                          }
+                        />
+                        <span className="px-4 py-4 border-[1px] border-white font-light text-sm">
+                          Landing Page Design
+                        </span>
+                      </label>
+                    </div>
+                    <div id="type-button" className="pt-6">
+                      <label>
+                        <input
+                          type="checkbox"
+                          className="hidden"
+                          onClick={() =>
+                            setFieldValue("type", [...values.type, "other"])
+                          }
+                        />
+                        <span className="px-4 py-4 border-[1px] border-white font-light text-sm">
+                          Other
+                        </span>
+                      </label>
+                    </div>
                   </div>
                   <label
-                    htmlFor="email"
+                    htmlFor="timeline"
                     style={{ display: "block" }}
                     className="text-white mb-2"
                   >
                     Do you have a timeline in mind?
                   </label>
                   <input
-                    id="email"
-                    placeholder="Enter your email"
+                    id="timeline"
                     type="text"
-                    value={values.email}
+                    value={values.timeline}
                     onChange={handleChange}
                     style={{ width: "100%" }}
                     onBlur={handleBlur}
                     className="bg-transparent border-[#FFFFFF80] border-[1px] h-10 text-white px-4 mb-4"
                   />
                   <label
-                    htmlFor="email"
+                    htmlFor="budget"
                     style={{ display: "block" }}
                     className="text-white mb-2"
                   >
                     What's your budget*
                   </label>
                   <input
-                    id="email"
-                    placeholder="Enter your email"
+                    id="budget"
                     type="text"
-                    value={values.email}
+                    value={values.budget}
                     onChange={handleChange}
                     style={{ width: "100%" }}
                     onBlur={handleBlur}
                     className="bg-transparent border-[#FFFFFF80] border-[1px] h-10 text-white px-4 mb-4"
                   />
                   <label
-                    htmlFor="email"
+                    htmlFor="description"
                     style={{ display: "block" }}
                     className="text-white mb-2"
                   >
                     Please tell us a bit about your project
                   </label>
                   <textarea
-                    id="email"
-                    placeholder="Enter your email"
-                    value={values.email}
+                    id="description"
+                    value={values.description}
                     onChange={handleChange}
                     style={{ width: "100%" }}
                     onBlur={handleBlur}
                     className="bg-transparent border-[#FFFFFF80] border-[1px] h-48 text-white p-4 mb-4"
                   />
-                  <Button primary>Send</Button>
+                  <button className="bg-gradient p-4 text-white" type="submit">
+                    Submit
+                  </button>
                 </form>
               )}
             </Formik>

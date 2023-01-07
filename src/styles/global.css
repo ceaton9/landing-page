@@ -56,6 +56,10 @@ body {
   background-color: #06132d;
   font-family: "Cerebri Sans";
 }
+#type-button input:checked + span{
+  background: linear-gradient(90deg, #dd31d1 0%, #8343da 47.92%, #3d84e7 100%);
+  border-color: transparent;
+}
 
 .gradient-text {
   background: linear-gradient(90deg, #dd31d1 0%, #8343da 47.92%, #3d84e7 100%);
