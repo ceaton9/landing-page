@@ -1,27 +1,21 @@
-import Button from "@components/button";
 import Footer from "@components/footer";
 import Navbar from "@components/navbar";
 import { LANG } from "@utils/lang";
 import { Formik } from "formik";
-import React from "react";
-import * as Yup from "yup";
+import React, { useCallback } from "react";
 
 export default function ProjectForm() {
-  const FormProjectsSchema = Yup.object().shape({
-    email: Yup.string().email("Invalid email").required("Required"),
-  });
+  const isTypePicked = useCallback((arrType: string[], type: string) => {
+    return arrType.indexOf(type);
+  }, []);
 
   return (
     <>
       <Navbar logo={LANG.NAVBAR.LOGO} />
       <section id="project" about="project" className="px-24 mb-96">
         <div className="flex items-center justify-between">
-          <h1 className="text-white text-[64px] font-bold">
-            Let's Build
-            <br />
-            Something Great
-            <br />
-            Together
+          <h1 className="text-white text-[64px] font-bold w-1/2">
+            Let's Build Something Great Together
           </h1>
           <div className="w-[600px] h-80 rounded-3xl bg-slate-300"></div>
         </div>
@@ -130,12 +124,24 @@ export default function ProjectForm() {
                         <input
                           type="checkbox"
                           className="hidden"
-                          onClick={() =>
-                            setFieldValue("type", [
-                              ...values.type,
-                              "mobile-app",
-                            ])
-                          }
+                          onClick={() => {
+                            if (
+                              isTypePicked(
+                                values.type,
+                                "mobile-development"
+                              ) === -1
+                            ) {
+                              setFieldValue("type", [
+                                ...values.type,
+                                "mobile-development",
+                              ]);
+                            } else {
+                              values.type.splice(
+                                isTypePicked(values.type, "mobile-development"),
+                                1
+                              );
+                            }
+                          }}
                         />
                         <span className="px-4 py-4 border-[1px] border-white font-light text-sm">
                           Mobile App
