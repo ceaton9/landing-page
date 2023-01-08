@@ -153,12 +153,27 @@ export default function ProjectForm() {
                         <input
                           type="checkbox"
                           className="hidden"
-                          onClick={() =>
-                            setFieldValue("type", [
-                              ...values.type,
-                              "dashboard-development",
-                            ])
-                          }
+                          onClick={() => {
+                            if (
+                              isTypePicked(
+                                values.type,
+                                "dashboard-development"
+                              ) === -1
+                            ) {
+                              setFieldValue("type", [
+                                ...values.type,
+                                "dashboard-development",
+                              ]);
+                            } else {
+                              values.type.splice(
+                                isTypePicked(
+                                  values.type,
+                                  "dashboard-development"
+                                ),
+                                1
+                              );
+                            }
+                          }}
                         />
                         <span className="px-4 py-4 border-[1px] border-white font-light text-sm">
                           Dashboard Development
@@ -170,12 +185,22 @@ export default function ProjectForm() {
                         <input
                           type="checkbox"
                           className="hidden"
-                          onClick={() =>
-                            setFieldValue("type", [
-                              ...values.type,
-                              "web-development",
-                            ])
-                          }
+                          onClick={() => {
+                            if (
+                              isTypePicked(values.type, "web-development") ===
+                              -1
+                            ) {
+                              setFieldValue("type", [
+                                ...values.type,
+                                "web-development",
+                              ]);
+                            } else {
+                              values.type.splice(
+                                isTypePicked(values.type, "web-development"),
+                                1
+                              );
+                            }
+                          }}
                         />
                         <span className="px-4 py-4 border-[1px] border-white font-light text-sm">
                           Web Development
@@ -187,12 +212,27 @@ export default function ProjectForm() {
                         <input
                           type="checkbox"
                           className="hidden"
-                          onClick={() =>
-                            setFieldValue("type", [
-                              ...values.type,
-                              "landing-page-dev",
-                            ])
-                          }
+                          onClick={() => {
+                            if (
+                              isTypePicked(
+                                values.type,
+                                "landing-page-development"
+                              ) === -1
+                            ) {
+                              setFieldValue("type", [
+                                ...values.type,
+                                "landing-page-development",
+                              ]);
+                            } else {
+                              values.type.splice(
+                                isTypePicked(
+                                  values.type,
+                                  "landing-page-development"
+                                ),
+                                1
+                              );
+                            }
+                          }}
                         />
                         <span className="px-4 py-4 border-[1px] border-white font-light text-sm">
                           Landing Page Development
@@ -204,12 +244,21 @@ export default function ProjectForm() {
                         <input
                           type="checkbox"
                           className="hidden"
-                          onClick={() =>
-                            setFieldValue("type", [
-                              ...values.type,
-                              "graphic-design",
-                            ])
-                          }
+                          onClick={() => {
+                            if (
+                              isTypePicked(values.type, "graphic-design") === -1
+                            ) {
+                              setFieldValue("type", [
+                                ...values.type,
+                                "graphic-design",
+                              ]);
+                            } else {
+                              values.type.splice(
+                                isTypePicked(values.type, "graphic-design"),
+                                1
+                              );
+                            }
+                          }}
                         />
                         <span className="px-4 py-4 border-[1px] border-white font-light text-sm">
                           Graphic Design
@@ -221,12 +270,22 @@ export default function ProjectForm() {
                         <input
                           type="checkbox"
                           className="hidden"
-                          onClick={() =>
-                            setFieldValue("type", [
-                              ...values.type,
-                              "dashboard-design",
-                            ])
-                          }
+                          onClick={() => {
+                            if (
+                              isTypePicked(values.type, "dashboard-design") ===
+                              -1
+                            ) {
+                              setFieldValue("type", [
+                                ...values.type,
+                                "dashboard-design",
+                              ]);
+                            } else {
+                              values.type.splice(
+                                isTypePicked(values.type, "dashboard-design"),
+                                1
+                              );
+                            }
+                          }}
                         />
                         <span className="px-4 py-4 border-[1px] border-white font-light text-sm">
                           Dashboard Design
@@ -238,12 +297,21 @@ export default function ProjectForm() {
                         <input
                           type="checkbox"
                           className="hidden"
-                          onClick={() =>
-                            setFieldValue("type", [
-                              ...values.type,
-                              "app-design",
-                            ])
-                          }
+                          onClick={() => {
+                            if (
+                              isTypePicked(values.type, "app-design") === -1
+                            ) {
+                              setFieldValue("type", [
+                                ...values.type,
+                                "app-design",
+                              ]);
+                            } else {
+                              values.type.splice(
+                                isTypePicked(values.type, "app-design"),
+                                1
+                              );
+                            }
+                          }}
                         />
                         <span className="px-4 py-4 border-[1px] border-white font-light text-sm">
                           App Design
@@ -255,12 +323,27 @@ export default function ProjectForm() {
                         <input
                           type="checkbox"
                           className="hidden"
-                          onClick={() =>
-                            setFieldValue("type", [
-                              ...values.type,
-                              "landing-page-design",
-                            ])
-                          }
+                          onClick={() => {
+                            if (
+                              isTypePicked(
+                                values.type,
+                                "landing-page-design"
+                              ) === -1
+                            ) {
+                              setFieldValue("type", [
+                                ...values.type,
+                                "landing-page-design",
+                              ]);
+                            } else {
+                              values.type.splice(
+                                isTypePicked(
+                                  values.type,
+                                  "landing-page-design"
+                                ),
+                                1
+                              );
+                            }
+                          }}
                         />
                         <span className="px-4 py-4 border-[1px] border-white font-light text-sm">
                           Landing Page Design
@@ -272,9 +355,16 @@ export default function ProjectForm() {
                         <input
                           type="checkbox"
                           className="hidden"
-                          onClick={() =>
-                            setFieldValue("type", [...values.type, "other"])
-                          }
+                          onClick={() => {
+                            if (isTypePicked(values.type, "other") === -1) {
+                              setFieldValue("type", [...values.type, "other"]);
+                            } else {
+                              values.type.splice(
+                                isTypePicked(values.type, "other"),
+                                1
+                              );
+                            }
+                          }}
                         />
                         <span className="px-4 py-4 border-[1px] border-white font-light text-sm">
                           Other
