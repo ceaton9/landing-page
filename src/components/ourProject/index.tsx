@@ -65,13 +65,13 @@ export default function OurProject() {
       className="px-24 mb-20 space-y-12"
     >
       <HeaderSection title="Our Project" isHaveReadmore href="/" />
-      {contentBody.map(({ description, id, title }, index) =>
-        index % 2 === 0 ? (
-          <Card {...{ description, id, title }} position="left" />
-        ) : (
-          <Card {...{ description, id, title }} position="right" />
-        )
-      )}
+      {contentBody.map(({ description, id, title }, index) => (
+        <Card
+          key={id}
+          position={index % 2 === 0 ? "left" : "right"}
+          {...{ description, title }}
+        />
+      ))}
     </section>
   );
 }
