@@ -12,10 +12,11 @@ import Footer from "@components/footer";
 import Navbar from "@components/navbar";
 import Testimonials from "@components/testimonials";
 import OurProject from "@components/ourProject";
+import SEO from "@components/seo";
 
 export default function Index() {
   return (
-    <>
+    <SEO>
       <Navbar logo={LANG.NAVBAR.LOGO} />
       <Hero
         headline={LANG.HEADLINE}
@@ -26,6 +27,6 @@ export default function Index() {
       <OurProject />
       <Testimonials />
       <Footer />
-    </>
+    </SEO>
   );
 }

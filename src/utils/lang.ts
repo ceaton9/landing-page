@@ -1,5 +1,5 @@
 export const LANG = {
-  HEADLINE: "Get Smart Solutions For Your Business with GROOVE.",
+  HEADLINE: "Get Smart Solutions For Your Business with GRV.",
   MINI_HEADLINE: "BUSINESS BOOST",
   HEADLINE_DESC:
     "We're bringing digital creators, Solving problems with unique and creative system for your business",

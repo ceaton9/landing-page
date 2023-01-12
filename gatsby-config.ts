@@ -2,8 +2,10 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Groove Studio - Digital Solutions`,
+    title: `GRV Studio - Digital Solutions`,
     siteUrl: `https://www.grvstudio.id`,
+    image: `/favicon.png`,
+    description: `Expert software development team delivering custom, high-quality solutions for web and mobile applications. Specializing in Agile development, user-centric design, and cutting-edge technologies.`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -36,7 +38,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/favicon.png",
       },
     },
     "gatsby-plugin-sharp",

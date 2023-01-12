@@ -1,8 +1,14 @@
+/**
+ * @author Groove Studio
+ * @copyright © All rights reserved. Groove Studio 2023
+ */
+
+import React, { useCallback } from "react";
+import { Formik } from "formik";
+
 import Footer from "@components/footer";
 import Navbar from "@components/navbar";
 import { LANG } from "@utils/lang";
-import { Formik } from "formik";
-import React, { useCallback } from "react";
 
 export default function ProjectForm() {
   const isTypePicked = useCallback((arrType: string[], type: string) => {
@@ -52,14 +58,9 @@ export default function ProjectForm() {
             >
               {({
                 values,
-                touched,
-                errors,
-                dirty,
-                isSubmitting,
                 handleChange,
                 handleBlur,
                 handleSubmit,
-                handleReset,
                 setFieldValue,
               }) => (
                 <form onSubmit={handleSubmit}>
