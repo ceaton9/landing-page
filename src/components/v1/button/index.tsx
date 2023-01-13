@@ -3,11 +3,11 @@
  * @copyright © All rights reserved. Groove Studio 2023
  */
 
-import React from "react";
+import React from 'react'
 
 interface ButtonProps {
-  primary?: boolean;
-  children: string | React.ReactNode;
+  primary?: boolean
+  children: string | React.ReactNode
 }
 
 export default function Button(props: ButtonProps) {
@@ -15,11 +15,11 @@ export default function Button(props: ButtonProps) {
     <button
       className={`text-white font-medium text-base py-5 px-7 ${
         props.primary
-          ? "bg-gradient"
-          : "border-white border-2 hover:bg-white hover:text-black transition duration-150 ease-out hover:ease-in"
+          ? 'bg-gradient'
+          : 'border-white border-2 hover:bg-white hover:text-black transition duration-150 ease-out hover:ease-in'
       }`}
     >
       {props.children}
     </button>
-  );
+  )
 }

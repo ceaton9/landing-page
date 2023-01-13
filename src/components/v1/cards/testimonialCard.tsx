@@ -3,9 +3,9 @@
  * @copyright © All rights reserved. Groove Studio 2023
  */
 
-import React from "react";
+import React from 'react'
 
-import Star from "@assets/star.svg";
+import Star from '@assets/star.svg'
 
 export default function TestimonialCard() {
   return (
@@ -35,5 +35,5 @@ export default function TestimonialCard() {
         ini."
       </p>
     </div>
-  );
+  )
 }

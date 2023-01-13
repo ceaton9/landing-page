@@ -3,18 +3,18 @@
  * @copyright © All rights reserved. Groove Studio 2023
  */
 
-import React from "react";
+import React from 'react'
 
 interface CardProps {
-  position: "left" | "right";
-  title: string;
-  description: string;
+  position: 'left' | 'right'
+  title: string
+  description: string
 }
 
 export default function Card({ description, position, title }: CardProps) {
   return (
     <div className="flex gap-10">
-      {position === "left" ? (
+      {position === 'left' ? (
         <>
           <div className="w-1/2 h-64 bg-slate-400 rounded-3xl"></div>
           <div className="mr-6"></div>
@@ -24,12 +24,12 @@ export default function Card({ description, position, title }: CardProps) {
         <h4 className="text-xl mb-3">{title}</h4>
         <p className="font-light">{description}</p>
       </div>
-      {position === "right" ? (
+      {position === 'right' ? (
         <>
           <div className="ml-6"></div>
           <div className="w-1/2 h-64 bg-slate-400 rounded-3xl"></div>
         </>
       ) : undefined}
     </div>
-  );
+  )
 }

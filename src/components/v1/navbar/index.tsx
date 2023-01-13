@@ -3,20 +3,20 @@
  * @copyright © All rights reserved. Groove Studio 2023
  */
 
-import { Link } from "gatsby";
-import React from "react";
+import { Link } from 'gatsby'
+import React from 'react'
 
-import useNavbar from "@hooks/useNavbar";
-import Button from "@components/v1/button";
+import useNavbar from '@hooks/useNavbar'
+import Button from '@components/v1/button'
 
-import "./style.css";
+import './style.css'
 
 interface NavbarProps {
-  logo: string;
+  logo: string
 }
 
 export default function Navbar({ logo }: NavbarProps) {
-  const { linkLocal, onClickNavbarHandler } = useNavbar();
+  const { linkLocal, onClickNavbarHandler } = useNavbar()
 
   return (
     <section
@@ -49,5 +49,5 @@ export default function Navbar({ logo }: NavbarProps) {
         </Button>
       </div>
     </section>
-  );
+  )
 }

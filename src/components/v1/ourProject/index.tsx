@@ -3,16 +3,16 @@
  * @copyright © All rights reserved. Groove Studio 2023
  */
 
-import React from "react";
-import { uniqueId } from "lodash";
+import React from 'react'
+import { uniqueId } from 'lodash'
 
-import Card from "@components/v1/card/v1";
-import HeaderSection from "@components/v1/headerSection";
+import Card from '@components/v1/card/v1'
+import HeaderSection from '@components/v1/headerSection'
 
 const contentBody = [
   {
     id: uniqueId(),
-    title: "Mobile & Web Development",
+    title: 'Mobile & Web Development',
     description: `
     We've built several mobile and web app for our lovely customer. We
     deliver the best and crafting the greatest app with best quality. As
@@ -27,7 +27,7 @@ const contentBody = [
   },
   {
     id: uniqueId(),
-    title: "UI/UX Design",
+    title: 'UI/UX Design',
     description: `
     We specialize in creating visually appealing and user-friendly
     designs for both mobile and web platforms. We have a wide range of
@@ -42,7 +42,7 @@ const contentBody = [
   },
   {
     id: uniqueId(),
-    title: "Ilustration",
+    title: 'Ilustration',
     description: `
     Our illustration project is a versatile and dynamic showcase of our
     skills and abilities as an artist. With a wide range of styles and
@@ -55,7 +55,7 @@ const contentBody = [
     out. we can't wait to bring your vision to life!
     `,
   },
-];
+]
 
 export default function OurProject() {
   return (
@@ -68,10 +68,10 @@ export default function OurProject() {
       {contentBody.map(({ description, id, title }, index) => (
         <Card
           key={id}
-          position={index % 2 === 0 ? "left" : "right"}
+          position={index % 2 === 0 ? 'left' : 'right'}
           {...{ description, title }}
         />
       ))}
     </section>
-  );
+  )
 }

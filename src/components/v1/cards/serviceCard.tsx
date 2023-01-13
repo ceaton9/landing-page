@@ -3,12 +3,12 @@
  * @copyright © All rights reserved. Groove Studio 2023
  */
 
-import React from "react";
+import React from 'react'
 
 interface ServiceCard {
-  children: string;
-  cardImage: React.ReactNode | string;
-  cardTitle: string;
+  children: string
+  cardImage: React.ReactNode | string
+  cardTitle: string
 }
 
 export default function ServiceCard(props: ServiceCard) {
@@ -20,5 +20,5 @@ export default function ServiceCard(props: ServiceCard) {
         <p className="font-light">{props.children}</p>
       </div>
     </div>
-  );
+  )
 }

@@ -3,9 +3,9 @@
  * @copyright © All rights reserved. DoCheck 2022
  */
 
-import TestimonialCard from "@components/v1/cards/testimonialCard";
-import HeaderSection from "@components/v1/headerSection";
-import React from "react";
+import TestimonialCard from '@components/v1/cards/testimonialCard'
+import HeaderSection from '@components/v1/headerSection'
+import React from 'react'
 
 export default function Testimonials() {
   return (
@@ -17,5 +17,5 @@ export default function Testimonials() {
         ))}
       </div>
     </section>
-  );
+  )
 }

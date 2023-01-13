@@ -3,10 +3,10 @@
  * @copyright © All rights reserved. Groove Studio 2023
  */
 
-import React from "react";
+import React from 'react'
 
-import ServiceCard from "@components/v1/cards/serviceCard";
-import HeaderSection from "@components/v1/headerSection";
+import ServiceCard from '@components/v1/cards/serviceCard'
+import HeaderSection from '@components/v1/headerSection'
 
 export default function Services() {
   return (
@@ -51,5 +51,5 @@ export default function Services() {
         </ServiceCard>
       </div>
     </section>
-  );
+  )
 }

@@ -3,14 +3,14 @@
  * @copyright © All rights reserved. Groove Studio 2023
  */
 
-import React from "react";
-import { useSiteMetadata } from "@hooks/useSiteMetadata";
+import React from 'react'
+import { useSiteMetadata } from '@hooks/useSiteMetadata'
 
 interface SEOProps {
-  title?: string;
-  description?: string;
-  pathname?: string;
-  children?: any;
+  title?: string
+  description?: string
+  pathname?: string
+  children?: any
 }
 
 export default function SEO({
@@ -24,14 +24,14 @@ export default function SEO({
     description: defaultDescription,
     image,
     siteUrl,
-  } = useSiteMetadata();
+  } = useSiteMetadata()
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image}`,
     url: `${siteUrl}${pathname || ``}`,
-  };
+  }
 
   return (
     <>
@@ -41,5 +41,5 @@ export default function SEO({
       <link rel="icon" href={seo.image} />
       {children}
     </>
-  );
+  )
 }

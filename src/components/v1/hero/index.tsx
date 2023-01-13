@@ -3,37 +3,37 @@
  * @copyright © All rights reserved. Groove Studio 2023
  */
 
-import React, { useMemo } from "react";
+import React, { useMemo } from 'react'
 
-import heroImage from "@assets/hero-image.png";
-import Button from "@components/v1/button";
+import heroImage from '@assets/hero-image.png'
+import Button from '@components/v1/button'
 
-import "./style.css";
+import './style.css'
 
 interface HeroProps {
-  headline: string;
-  miniHeadline: string;
-  headlineDescription: string;
+  headline: string
+  miniHeadline: string
+  headlineDescription: string
 }
 
 export default function Hero(props: HeroProps) {
   const lastWord = useMemo(
-    () => props.headline?.split(" ").pop(),
+    () => props.headline?.split(' ').pop(),
     [props.headline]
-  );
+  )
 
   const headline = useMemo(() => {
-    const lastIndexOfSpace = props.headline?.lastIndexOf(" ");
-    if (lastIndexOfSpace === -1) return props.headline;
-    return props.headline?.substring(0, lastIndexOfSpace);
-  }, [props.headline]);
+    const lastIndexOfSpace = props.headline?.lastIndexOf(' ')
+    if (lastIndexOfSpace === -1) return props.headline
+    return props.headline?.substring(0, lastIndexOfSpace)
+  }, [props.headline])
 
   return (
     <section id="hero" about="hero" className="flex">
       <section id="description" className="w-3/6 pl-24 mr-12">
         <p className="text-sm text-[#C4C4C4] mb-4">{props.miniHeadline}</p>
         <h1 className="text-white text-[56px]">
-          {headline.concat(" ")}
+          {headline.concat(' ')}
           <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#DD31D1] via-[#8343DA] to-[#3D84E7]">
             {lastWord}
           </span>
@@ -52,5 +52,5 @@ export default function Hero(props: HeroProps) {
         </div>
       </section>
     </section>
-  );
+  )
 }

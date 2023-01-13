@@ -3,16 +3,16 @@
  * @copyright © All rights reserved. Groove Studio 2023
  */
 
-import React from "react";
-import { Link } from "gatsby";
+import React from 'react'
+import { Link } from 'gatsby'
 
-import ChevIcon from "@assets/arrow-left.svg";
-import LineBreak from "@components/v1/lineBreak";
+import ChevIcon from '@assets/arrow-left.svg'
+import LineBreak from '@components/v1/lineBreak'
 
 interface HeaderSectionProps {
-  title: string;
-  isHaveReadmore?: boolean;
-  href?: string;
+  title: string
+  isHaveReadmore?: boolean
+  href?: string
 }
 
 export default function HeaderSection({
@@ -37,5 +37,5 @@ export default function HeaderSection({
       </div>
       <LineBreak />
     </>
-  );
+  )
 }
