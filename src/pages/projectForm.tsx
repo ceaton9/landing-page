@@ -3,17 +3,17 @@
  * @copyright © All rights reserved. Groove Studio 2023
  */
 
-import React, { useCallback } from "react";
-import { Formik } from "formik";
+import React, { useCallback } from 'react'
+import { Formik } from 'formik'
 
-import { LANG } from "@utils/lang";
-import Footer from "@components/v1/footer";
-import Navbar from "@components/v1/navbar";
+import { LANG } from '@utils/lang'
+import Footer from '@components/v1/footer'
+import Navbar from '@components/v1/navbar'
 
 export default function ProjectForm() {
   const isTypePicked = useCallback((arrType: string[], type: string) => {
-    return arrType.indexOf(type);
-  }, []);
+    return arrType.indexOf(type)
+  }, [])
 
   return (
     <>
@@ -43,17 +43,17 @@ export default function ProjectForm() {
           <div className="h-60 rounded-xl mb-12 w-1/2 mt-40 flex-col">
             <Formik
               initialValues={{
-                name: "",
-                company: "",
-                email: "",
+                name: '',
+                company: '',
+                email: '',
                 type: [],
-                timeline: "",
+                timeline: '',
                 budget: 0,
                 description: 0,
               }}
               onSubmit={(values) => {
                 // same shape as initial values
-                console.log(values);
+                console.log(values)
               }}
             >
               {({
@@ -66,7 +66,7 @@ export default function ProjectForm() {
                 <form onSubmit={handleSubmit}>
                   <label
                     htmlFor="name"
-                    style={{ display: "block" }}
+                    style={{ display: 'block' }}
                     className="text-white mb-2"
                   >
                     What's your name*
@@ -76,13 +76,13 @@ export default function ProjectForm() {
                     type="text"
                     value={values.name}
                     onChange={handleChange}
-                    style={{ width: "100%" }}
+                    style={{ width: '100%' }}
                     onBlur={handleBlur}
                     className="bg-transparent border-[#FFFFFF80] border-[1px] h-10 text-white px-4 mb-4"
                   />
                   <label
                     htmlFor="company"
-                    style={{ display: "block" }}
+                    style={{ display: 'block' }}
                     className="text-white mb-2"
                   >
                     Name of your company/organization
@@ -92,13 +92,13 @@ export default function ProjectForm() {
                     type="text"
                     value={values.company}
                     onChange={handleChange}
-                    style={{ width: "100%" }}
+                    style={{ width: '100%' }}
                     onBlur={handleBlur}
                     className="bg-transparent border-[#FFFFFF80] border-[1px] h-10 text-white px-4 mb-4"
                   />
                   <label
                     htmlFor="email"
-                    style={{ display: "block" }}
+                    style={{ display: 'block' }}
                     className="text-white mb-2"
                   >
                     What's your email address?*
@@ -108,13 +108,13 @@ export default function ProjectForm() {
                     type="text"
                     value={values.email}
                     onChange={handleChange}
-                    style={{ width: "100%" }}
+                    style={{ width: '100%' }}
                     onBlur={handleBlur}
                     className="bg-transparent border-[#FFFFFF80] border-[1px] h-10 text-white px-4 mb-4"
                   />
                   <label
                     htmlFor="type"
-                    style={{ display: "block" }}
+                    style={{ display: 'block' }}
                     className="text-white mb-2"
                   >
                     Type's of work?*
@@ -129,18 +129,18 @@ export default function ProjectForm() {
                             if (
                               isTypePicked(
                                 values.type,
-                                "mobile-development"
+                                'mobile-development'
                               ) === -1
                             ) {
-                              setFieldValue("type", [
+                              setFieldValue('type', [
                                 ...values.type,
-                                "mobile-development",
-                              ]);
+                                'mobile-development',
+                              ])
                             } else {
                               values.type.splice(
-                                isTypePicked(values.type, "mobile-development"),
+                                isTypePicked(values.type, 'mobile-development'),
                                 1
-                              );
+                              )
                             }
                           }}
                         />
@@ -158,21 +158,21 @@ export default function ProjectForm() {
                             if (
                               isTypePicked(
                                 values.type,
-                                "dashboard-development"
+                                'dashboard-development'
                               ) === -1
                             ) {
-                              setFieldValue("type", [
+                              setFieldValue('type', [
                                 ...values.type,
-                                "dashboard-development",
-                              ]);
+                                'dashboard-development',
+                              ])
                             } else {
                               values.type.splice(
                                 isTypePicked(
                                   values.type,
-                                  "dashboard-development"
+                                  'dashboard-development'
                                 ),
                                 1
-                              );
+                              )
                             }
                           }}
                         />
@@ -188,18 +188,18 @@ export default function ProjectForm() {
                           className="hidden"
                           onClick={() => {
                             if (
-                              isTypePicked(values.type, "web-development") ===
+                              isTypePicked(values.type, 'web-development') ===
                               -1
                             ) {
-                              setFieldValue("type", [
+                              setFieldValue('type', [
                                 ...values.type,
-                                "web-development",
-                              ]);
+                                'web-development',
+                              ])
                             } else {
                               values.type.splice(
-                                isTypePicked(values.type, "web-development"),
+                                isTypePicked(values.type, 'web-development'),
                                 1
-                              );
+                              )
                             }
                           }}
                         />
@@ -217,21 +217,21 @@ export default function ProjectForm() {
                             if (
                               isTypePicked(
                                 values.type,
-                                "landing-page-development"
+                                'landing-page-development'
                               ) === -1
                             ) {
-                              setFieldValue("type", [
+                              setFieldValue('type', [
                                 ...values.type,
-                                "landing-page-development",
-                              ]);
+                                'landing-page-development',
+                              ])
                             } else {
                               values.type.splice(
                                 isTypePicked(
                                   values.type,
-                                  "landing-page-development"
+                                  'landing-page-development'
                                 ),
                                 1
-                              );
+                              )
                             }
                           }}
                         />
@@ -247,17 +247,17 @@ export default function ProjectForm() {
                           className="hidden"
                           onClick={() => {
                             if (
-                              isTypePicked(values.type, "graphic-design") === -1
+                              isTypePicked(values.type, 'graphic-design') === -1
                             ) {
-                              setFieldValue("type", [
+                              setFieldValue('type', [
                                 ...values.type,
-                                "graphic-design",
-                              ]);
+                                'graphic-design',
+                              ])
                             } else {
                               values.type.splice(
-                                isTypePicked(values.type, "graphic-design"),
+                                isTypePicked(values.type, 'graphic-design'),
                                 1
-                              );
+                              )
                             }
                           }}
                         />
@@ -273,18 +273,18 @@ export default function ProjectForm() {
                           className="hidden"
                           onClick={() => {
                             if (
-                              isTypePicked(values.type, "dashboard-design") ===
+                              isTypePicked(values.type, 'dashboard-design') ===
                               -1
                             ) {
-                              setFieldValue("type", [
+                              setFieldValue('type', [
                                 ...values.type,
-                                "dashboard-design",
-                              ]);
+                                'dashboard-design',
+                              ])
                             } else {
                               values.type.splice(
-                                isTypePicked(values.type, "dashboard-design"),
+                                isTypePicked(values.type, 'dashboard-design'),
                                 1
-                              );
+                              )
                             }
                           }}
                         />
@@ -300,17 +300,17 @@ export default function ProjectForm() {
                           className="hidden"
                           onClick={() => {
                             if (
-                              isTypePicked(values.type, "app-design") === -1
+                              isTypePicked(values.type, 'app-design') === -1
                             ) {
-                              setFieldValue("type", [
+                              setFieldValue('type', [
                                 ...values.type,
-                                "app-design",
-                              ]);
+                                'app-design',
+                              ])
                             } else {
                               values.type.splice(
-                                isTypePicked(values.type, "app-design"),
+                                isTypePicked(values.type, 'app-design'),
                                 1
-                              );
+                              )
                             }
                           }}
                         />
@@ -328,21 +328,21 @@ export default function ProjectForm() {
                             if (
                               isTypePicked(
                                 values.type,
-                                "landing-page-design"
+                                'landing-page-design'
                               ) === -1
                             ) {
-                              setFieldValue("type", [
+                              setFieldValue('type', [
                                 ...values.type,
-                                "landing-page-design",
-                              ]);
+                                'landing-page-design',
+                              ])
                             } else {
                               values.type.splice(
                                 isTypePicked(
                                   values.type,
-                                  "landing-page-design"
+                                  'landing-page-design'
                                 ),
                                 1
-                              );
+                              )
                             }
                           }}
                         />
@@ -357,13 +357,13 @@ export default function ProjectForm() {
                           type="checkbox"
                           className="hidden"
                           onClick={() => {
-                            if (isTypePicked(values.type, "other") === -1) {
-                              setFieldValue("type", [...values.type, "other"]);
+                            if (isTypePicked(values.type, 'other') === -1) {
+                              setFieldValue('type', [...values.type, 'other'])
                             } else {
                               values.type.splice(
-                                isTypePicked(values.type, "other"),
+                                isTypePicked(values.type, 'other'),
                                 1
-                              );
+                              )
                             }
                           }}
                         />
@@ -375,7 +375,7 @@ export default function ProjectForm() {
                   </div>
                   <label
                     htmlFor="timeline"
-                    style={{ display: "block" }}
+                    style={{ display: 'block' }}
                     className="text-white mb-2"
                   >
                     Do you have a timeline in mind?
@@ -385,13 +385,13 @@ export default function ProjectForm() {
                     type="text"
                     value={values.timeline}
                     onChange={handleChange}
-                    style={{ width: "100%" }}
+                    style={{ width: '100%' }}
                     onBlur={handleBlur}
                     className="bg-transparent border-[#FFFFFF80] border-[1px] h-10 text-white px-4 mb-4"
                   />
                   <label
                     htmlFor="budget"
-                    style={{ display: "block" }}
+                    style={{ display: 'block' }}
                     className="text-white mb-2"
                   >
                     What's your budget*
@@ -401,13 +401,13 @@ export default function ProjectForm() {
                     type="text"
                     value={values.budget}
                     onChange={handleChange}
-                    style={{ width: "100%" }}
+                    style={{ width: '100%' }}
                     onBlur={handleBlur}
                     className="bg-transparent border-[#FFFFFF80] border-[1px] h-10 text-white px-4 mb-4"
                   />
                   <label
                     htmlFor="description"
-                    style={{ display: "block" }}
+                    style={{ display: 'block' }}
                     className="text-white mb-2"
                   >
                     Please tell us a bit about your project
@@ -416,7 +416,7 @@ export default function ProjectForm() {
                     id="description"
                     value={values.description}
                     onChange={handleChange}
-                    style={{ width: "100%" }}
+                    style={{ width: '100%' }}
                     onBlur={handleBlur}
                     className="bg-transparent border-[#FFFFFF80] border-[1px] h-48 text-white p-4 mb-4"
                   />
@@ -431,5 +431,5 @@ export default function ProjectForm() {
       </section>
       <Footer />
     </>
-  );
+  )
 }

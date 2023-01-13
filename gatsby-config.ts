@@ -1,4 +1,4 @@
-import type { GatsbyConfig } from "gatsby";
+import type { GatsbyConfig } from 'gatsby'
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -12,10 +12,10 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    "gatsby-plugin-image",
-    "gatsby-plugin-postcss",
+    'gatsby-plugin-image',
+    'gatsby-plugin-postcss',
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           include: /\.svg$/, // See below to configure properly
@@ -26,32 +26,32 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
-          "@components": "src/components",
-          "@utils": "src/utils",
-          "@assets": "src/assets",
-          "@hooks": "src/hooks",
+          '@components': 'src/components',
+          '@utils': 'src/utils',
+          '@assets': 'src/assets',
+          '@hooks': 'src/hooks',
         },
         extensions: [],
       },
     },
-    "gatsby-plugin-sitemap",
+    'gatsby-plugin-sitemap',
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: "src/images/favicon.png",
+        icon: 'src/images/favicon.png',
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: 'images',
+        path: './src/images/',
       },
-      __key: "images",
+      __key: 'images',
     },
   ],
-};
+}
 
-export default config;
+export default config

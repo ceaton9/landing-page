@@ -1,52 +1,52 @@
 export const FOOTER = {
   FOOTER_ITEMS: [
     {
-      TITLE: "Email",
+      TITLE: 'Email',
       LINKS: [
         {
-          label: "hello@groove.studio",
-          url: "mailto:hello@groove.studio",
+          label: 'hello@groove.studio',
+          url: 'mailto:hello@groove.studio',
         },
       ],
     },
     {
-      TITLE: "Home",
+      TITLE: 'Home',
       LINKS: [
         {
-          label: "Product",
-          url: "/",
+          label: 'Product',
+          url: '/',
         },
         {
-          label: "Project",
-          url: "/",
+          label: 'Project',
+          url: '/',
         },
       ],
     },
     {
-      TITLE: "About",
+      TITLE: 'About',
       LINKS: [
         {
-          label: "Contact Us",
-          url: "/",
+          label: 'Contact Us',
+          url: '/',
         },
         {
-          label: "License",
-          url: "/",
+          label: 'License',
+          url: '/',
         },
         {
-          label: "Privacy Policy",
-          url: "/",
+          label: 'Privacy Policy',
+          url: '/',
         },
       ],
     },
     {
-      TITLE: "Address",
+      TITLE: 'Address',
       LINKS: [
         {
-          label: "Bandung, West Java",
-          url: "/",
+          label: 'Bandung, West Java',
+          url: '/',
         },
       ],
     },
   ],
-};
+}
