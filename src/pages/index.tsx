@@ -5,14 +5,14 @@
 
 import React from "react";
 
-import Hero from "@components/hero";
 import { LANG } from "@utils/lang";
-import Services from "@components/services";
-import Footer from "@components/footer";
-import Navbar from "@components/navbar";
-import Testimonials from "@components/testimonials";
-import OurProject from "@components/ourProject";
-import SEO from "@components/seo";
+import Footer from "@components/v1/footer";
+import Hero from "@components/v1/hero";
+import Navbar from "@components/v1/navbar";
+import OurProject from "@components/v1/ourProject";
+import SEO from "@components/v1/seo";
+import Services from "@components/v1/services";
+import Testimonials from "@components/v1/testimonials";
 
 export default function Index() {
   return (

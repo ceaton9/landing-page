@@ -1,3 +1,8 @@
+/**
+ * @author Groove Studio
+ * @copyright © All rights reserved. Groove Studio 2023
+ */
+
 import React from "react";
 
 export default function LineBreak() {

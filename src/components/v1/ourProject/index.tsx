@@ -6,8 +6,8 @@
 import React from "react";
 import { uniqueId } from "lodash";
 
-import HeaderSection from "@components/headerSection";
-import Card from "@components/card/v1";
+import Card from "@components/v1/card/v1";
+import HeaderSection from "@components/v1/headerSection";
 
 const contentBody = [
   {

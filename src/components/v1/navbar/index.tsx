@@ -6,10 +6,10 @@
 import { Link } from "gatsby";
 import React from "react";
 
-import Button from "@components/button";
+import useNavbar from "@hooks/useNavbar";
+import Button from "@components/v1/button";
 
 import "./style.css";
-import useNavbar from "@hooks/useNavbar";
 
 interface NavbarProps {
   logo: string;

@@ -6,8 +6,8 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import LineBreak from "@components/lineBreak";
 import ChevIcon from "@assets/arrow-left.svg";
+import LineBreak from "@components/v1/lineBreak";
 
 interface HeaderSectionProps {
   title: string;

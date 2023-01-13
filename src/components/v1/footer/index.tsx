@@ -1,11 +1,17 @@
-import { FOOTER } from "@utils/footer";
+/**
+ * @author Groove Studio
+ * @copyright © All rights reserved. Groove Studio 2023
+ */
+
 import React from "react";
+
+import { FOOTER } from "@utils/footer";
 import InstagramIcon from "@assets/instagram.png";
 import FacebookIcon from "@assets/facebook.png";
 import YoutubeIcon from "@assets/youtube.png";
 import TwitterIcon from "@assets/twitter.png";
-import LineBreak from "@components/lineBreak";
 import { LANG } from "@utils/lang";
+import LineBreak from "@components/v1/lineBreak";
 
 export default function Footer() {
   return (

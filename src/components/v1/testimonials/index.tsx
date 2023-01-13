@@ -3,10 +3,9 @@
  * @copyright © All rights reserved. DoCheck 2022
  */
 
+import TestimonialCard from "@components/v1/cards/testimonialCard";
+import HeaderSection from "@components/v1/headerSection";
 import React from "react";
-
-import TestimonialCard from "@components/cards/testimonialCard";
-import HeaderSection from "@components/headerSection";
 
 export default function Testimonials() {
   return (

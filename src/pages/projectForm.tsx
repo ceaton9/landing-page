@@ -6,9 +6,9 @@
 import React, { useCallback } from "react";
 import { Formik } from "formik";
 
-import Footer from "@components/footer";
-import Navbar from "@components/navbar";
 import { LANG } from "@utils/lang";
+import Footer from "@components/v1/footer";
+import Navbar from "@components/v1/navbar";
 
 export default function ProjectForm() {
   const isTypePicked = useCallback((arrType: string[], type: string) => {

@@ -4,10 +4,11 @@
  */
 
 import React, { useMemo } from "react";
+
 import heroImage from "@assets/hero-image.png";
+import Button from "@components/v1/button";
 
 import "./style.css";
-import Button from "@components/button";
 
 interface HeroProps {
   headline: string;

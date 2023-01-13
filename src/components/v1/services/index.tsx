@@ -1,7 +1,12 @@
+/**
+ * @author Groove Studio
+ * @copyright © All rights reserved. Groove Studio 2023
+ */
+
 import React from "react";
 
-import ServiceCard from "@components/cards/serviceCard";
-import HeaderSection from "@components/headerSection";
+import ServiceCard from "@components/v1/cards/serviceCard";
+import HeaderSection from "@components/v1/headerSection";
 
 export default function Services() {
   return (
