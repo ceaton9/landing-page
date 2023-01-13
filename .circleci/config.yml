@@ -13,7 +13,7 @@ commands:
             - npm-cache-{{ checksum "./package-lock.json" }}
       - run:
           name: Install Dependencies
-          command: npm --prefix . install && npm --prefix . run-script clean
+          command: npm --prefix . install --force && npm --prefix . run-script clean
       - save_cache:
           key: npm-cache-{{ checksum "./package-lock.json" }}
           paths:
