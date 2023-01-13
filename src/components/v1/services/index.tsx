@@ -8,19 +8,19 @@ import React from 'react'
 import ServiceCard from '@components/v1/cards/serviceCard'
 import HeaderSection from '@components/v1/headerSection'
 
+import mobileDevelopment from '@assets/mobile-development.png'
+import illustrationService from '@assets/illustration-service.png'
+import uiUXDesign from '@assets/ui-ux-design.png'
+
 export default function Services() {
   return (
     <section id="services" about="services" className="px-24">
       <HeaderSection title="The Service we do," />
+
       <div className="flex gap-10 h-[538px] mt-6 mb-6">
         <ServiceCard
           cardTitle="Mobile & Development"
-          cardImage={
-            <img
-              src="https://picsum.photos/id/1/450/350?grayscale"
-              alt="attachment-1"
-            />
-          }
+          cardImage={<img src={mobileDevelopment} alt="attachment-1" />}
         >
           We can make you a mobile application using tech stack as u request or
           we decide what to use to build your idea. It is guaranteed that we
@@ -29,7 +29,7 @@ export default function Services() {
         <ServiceCard
           cardTitle="UI/UX Design"
           cardImage={
-            <img src="https://picsum.photos/id/2/450/350" alt="attachment-2" />
+            <img src={uiUXDesign} alt="attachment-2" />
           }
         >
           We can make you a mobile application using tech stack as u request or
@@ -40,7 +40,7 @@ export default function Services() {
           cardTitle="Illustration"
           cardImage={
             <img
-              src="https://picsum.photos/id/3/450/350?grayscale"
+              src={illustrationService}
               alt="attachment-3"
             />
           }

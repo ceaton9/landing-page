@@ -81,7 +81,7 @@ export default function Footer() {
       </div>
       <LineBreak />
       <p className="font-light text-white opacity-70 text-center py-8">
-        Copyright 2022 GRV All Right Reserved
+        Copyright {new Date().getFullYear()} GRV All Right Reserved
       </p>
     </div>
   )

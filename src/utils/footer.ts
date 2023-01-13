@@ -4,8 +4,8 @@ export const FOOTER = {
       TITLE: 'Email',
       LINKS: [
         {
-          label: 'hello@groove.studio',
-          url: 'mailto:hello@groove.studio',
+          label: 'admin@grvstudio.id',
+          url: 'mailto:admin@grvstudio.id',
         },
       ],
     },

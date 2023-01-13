@@ -13,11 +13,17 @@ interface ServiceCard {
 
 export default function ServiceCard(props: ServiceCard) {
   return (
-    <div className="card-bg w-1/3 p-6">
-      {props.cardImage}
-      <div className="h-auto text-white">
-        <h5 className="text-lg font-bold my-3">{props.cardTitle}</h5>
-        <p className="font-light">{props.children}</p>
+    <div className="card-bg w-1/3 p-3 scale-95">
+      <div className="scale-90">
+        <div className="scale-90">{props.cardImage}</div>
+        <div className="h-auto text-white">
+          <h5 className="text-lg font-bold my-3 text-white">
+            {props.cardTitle}
+          </h5>
+          <p className="font-light text-opacity-70 text-white">
+            {props.children}
+          </p>
+        </div>
       </div>
     </div>
   )
