@@ -22,7 +22,7 @@ export default function HeaderSection({
 }: HeaderSectionProps) {
   return (
     <>
-      <div className="flex justify-between items-center my-8">
+      <div className="flex justify-between items-center">
         <h1 className="text-white text-xl">{title}</h1>
         {isHaveReadmore && (
           <Link to={href!}>
