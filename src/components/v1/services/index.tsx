@@ -28,9 +28,7 @@ export default function Services() {
         </ServiceCard>
         <ServiceCard
           cardTitle="UI/UX Design"
-          cardImage={
-            <img src={uiUXDesign} alt="attachment-2" />
-          }
+          cardImage={<img src={uiUXDesign} alt="attachment-2" />}
         >
           We can make you a mobile application using tech stack as u request or
           we decide what to use to build your idea. It is guaranteed that we
@@ -38,12 +36,7 @@ export default function Services() {
         </ServiceCard>
         <ServiceCard
           cardTitle="Illustration"
-          cardImage={
-            <img
-              src={illustrationService}
-              alt="attachment-3"
-            />
-          }
+          cardImage={<img src={illustrationService} alt="attachment-3" />}
         >
           We can make you a mobile application using tech stack as u request or
           we decide what to use to build your idea. It is guaranteed that we

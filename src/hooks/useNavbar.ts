@@ -11,19 +11,19 @@ export default function useNavbar() {
     {
       id: uniqueId(),
       title: 'Project',
-      href: '/',
-      selected: true,
+      href: '/project',
+      selected: false,
     },
     {
       id: uniqueId(),
       title: 'Product',
-      href: '/',
+      href: '/product',
       selected: false,
     },
     {
       id: uniqueId(),
       title: 'About',
-      href: '/',
+      href: '/about',
       selected: false,
     },
   ])
