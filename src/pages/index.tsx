@@ -7,7 +7,7 @@ import React from 'react'
 
 import { LANG } from '@utils/lang'
 import Footer from '@components/v1/footer'
-import Hero from '@components/v1/hero'
+import Hero from '@components/v1/hero/primary'
 import Navbar from '@components/v1/navbar'
 import OurProject from '@components/v1/ourProject'
 import SEO from '@components/v1/seo'
