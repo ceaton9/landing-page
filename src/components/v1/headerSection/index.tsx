@@ -23,7 +23,7 @@ export default function HeaderSection({
   return (
     <>
       <div className="flex justify-between items-center">
-        <h1 className="text-white text-xl">{title}</h1>
+        <h1 className="text-white text-2xl">{title}</h1>
         {isHaveReadmore && (
           <Link to={href!}>
             <div className="flex justify-between items-center">
@@ -35,7 +35,9 @@ export default function HeaderSection({
           </Link>
         )}
       </div>
-      <LineBreak />
+      <div className="mt-5">
+        <LineBreak />
+      </div>
     </>
   )
 }

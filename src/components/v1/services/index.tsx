@@ -14,7 +14,7 @@ import uiUXDesign from '@assets/ui-ux-design.png'
 
 export default function Services() {
   return (
-    <section id="services" about="services" className="px-24">
+    <section id="services" about="services" className="px-24 mt-12">
       <HeaderSection title="The Service we do," />
 
       <div className="flex gap-10 h-[538px] mt-6 mb-6">

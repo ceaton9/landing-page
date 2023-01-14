@@ -23,7 +23,7 @@ export default function ContentProject({
   )
 
   return (
-    <div className="content-project inline-block flex justify-center items-center flex-col">
+    <div className="content-project inline-block text-white flex justify-center items-center flex-col">
       <div className="px-10 flex justify-center items-center flex-col">
         <h1 className="title text-3xl text-center mb-3">{title}</h1>
         <p className="description text-base opacity-75 mb-3 text-center font-light">

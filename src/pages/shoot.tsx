@@ -9,6 +9,9 @@ import { Formik } from 'formik'
 import { LANG } from '@utils/lang'
 import Footer from '@components/v1/footer'
 import Navbar from '@components/v1/navbar'
+import SEO from '@components/v1/seo'
+
+import projectImage from '@assets/webp/15_1.webp'
 
 export default function ProjectForm() {
   const isTypePicked = useCallback((arrType: string[], type: string) => {
@@ -16,14 +19,14 @@ export default function ProjectForm() {
   }, [])
 
   return (
-    <>
+    <SEO>
       <Navbar logo={LANG.NAVBAR.LOGO} />
-      <section id="project" about="project" className="px-24 mb-96">
+      <section id="project" about="project" className="px-24">
         <div className="flex items-center justify-between">
           <h1 className="text-white text-[64px] font-bold w-1/2">
             Let's Build Something Great Together
           </h1>
-          <div className="w-[600px] h-80 rounded-3xl bg-slate-300"></div>
+          <img className='-mt-24' alt="project" src={projectImage} />
         </div>
         <div className="flex gap-8">
           <div className="mt-40 w-1/2">
@@ -430,6 +433,6 @@ export default function ProjectForm() {
         </div>
       </section>
       <Footer />
-    </>
+    </SEO>
   )
 }

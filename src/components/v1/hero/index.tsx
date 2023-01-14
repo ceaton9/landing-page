@@ -9,6 +9,7 @@ import heroImage from '@assets/hero-image.png'
 import Button from '@components/v1/button'
 
 import './style.css'
+import { Link } from 'gatsby'
 
 interface HeroProps {
   headline: string
@@ -29,7 +30,7 @@ export default function Hero(props: HeroProps) {
   }, [props.headline])
 
   return (
-    <section id="hero" about="hero" className="flex">
+    <section id="hero" about="hero" className="flex items-center">
       <section id="description" className="w-3/6 pl-24 mr-12">
         <p className="text-sm text-[#C4C4C4] mb-4">{props.miniHeadline}</p>
         <h1 className="text-white text-[56px]">
@@ -42,7 +43,9 @@ export default function Hero(props: HeroProps) {
           {props.headlineDescription}
         </p>
         <div className="flex gap-7 mt-6">
-          <Button primary>Shoot us project</Button>
+          <Button primary>
+            <Link to="/shoot">Shoot us project</Link>
+          </Button>
           <Button>Explore Now</Button>
         </div>
       </section>
