@@ -68,8 +68,16 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.gradient-color {
+  background: linear-gradient(90deg, #dd31d1 0%, #8343da 47.92%, #3d84e7 100%);
+}
+
 .dark-smooth {
   background: rgba(255, 255, 255, 0.21);
+}
+
+.gentle-grey {
+  background: #a4a4a4;
 }
 
 .card-bg {

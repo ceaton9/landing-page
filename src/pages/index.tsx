@@ -13,6 +13,7 @@ import OurProject from '@components/v1/ourProject'
 import SEO from '@components/v1/seo'
 import Services from '@components/v1/services'
 import Testimonials from '@components/v1/testimonials'
+import OurProducts from '@components/v2/ourProducts'
 
 export default function Index() {
   return (
@@ -25,6 +26,7 @@ export default function Index() {
       />
       <Services />
       <OurProject />
+      <OurProducts />
       <Testimonials />
       <Footer />
     </SEO>

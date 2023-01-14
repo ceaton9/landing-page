@@ -15,6 +15,7 @@ import WhyUs from '@components/v2/whyUs'
 import heroImage from '@assets/webp/frame_9843_2x.webp'
 import whyUsImage from '@assets/webp/workspace2_1_2x.webp'
 import Footer from '@components/v1/footer'
+import OurProducts from '@components/v2/ourProducts'
 
 export default function About() {
   return (
@@ -30,6 +31,7 @@ export default function About() {
           description="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
           image={whyUsImage}
         />
+        <OurProducts />
         <Footer />
       </section>
     </SEO>
