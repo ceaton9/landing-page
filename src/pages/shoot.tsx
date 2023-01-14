@@ -19,8 +19,8 @@ export default function ProjectForm() {
       <section id="project" about="project" className="px-24">
         <SecondaryHero />
         <OrderUs />
+        <Footer />
       </section>
-      <Footer />
     </SEO>
   )
 }

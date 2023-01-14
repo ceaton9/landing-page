@@ -68,6 +68,10 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.dark-smooth {
+  background: rgba(255, 255, 255, 0.21);
+}
+
 .card-bg {
   background: #071736;
 }
