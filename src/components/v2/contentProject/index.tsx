@@ -32,7 +32,7 @@ export default function ContentProject({
       </div>
       <div className="mt-20">
         <img
-          className="hover:object-scale-down scale-125"
+          className="hover:object-scale-down drop-shadow-2xl scale-125"
           src={image}
           alt={altImageMemo}
         />

@@ -1,0 +1,32 @@
+.box {
+  --border-size: 3px;
+  --border-angle: 0turn;
+  width: 100%;
+  transition: all 0.5s ease-in;
+}
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+.box:hover {
+  animation: bg-spin 3s linear infinite;
+  background-image: conic-gradient(
+      from var(--border-angle),
+      #213,
+      #112 50%,
+      #221133
+    ),
+    conic-gradient(from var(--border-angle), transparent 20%, #3d84e7, #dd31d1);
+  background-size: calc(100% - (var(--border-size) * 1))
+      calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@property --border-angle {
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0turn;
+}
