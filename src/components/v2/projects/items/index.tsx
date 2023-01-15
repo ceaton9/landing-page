@@ -60,7 +60,7 @@ export default function ProjectItems({
               ))}
             </ul>
           </div>
-          <div className="mt-5">
+          <div className="mt-5 scale-75 -ml-12">
             <Link to="/shoot">
               <Button primary>See Detail</Button>
             </Link>

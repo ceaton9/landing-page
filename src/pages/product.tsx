@@ -8,12 +8,24 @@ import React from 'react'
 import SEO from '@components/v1/seo'
 import Navbar from '@components/v1/navbar'
 import { LANG } from '@utils/lang'
+import FourthHero from '@components/v1/hero/fourth'
+
+import productBanner from '@assets/webp/3d00681_1_2x.webp'
+import AllProducts from '@components/v2/allProducts'
+import Footer from '@components/v1/footer'
 
 export default function Product() {
   return (
     <SEO>
       <Navbar logo={LANG.NAVBAR.LOGO} />
-      <div id="product"></div>
+      <section id="product">
+        <FourthHero
+          image={productBanner}
+          title="We Create High Quality Digital Products"
+        />
+        <AllProducts />
+        <Footer />
+      </section>
     </SEO>
   )
 }

@@ -47,7 +47,7 @@ export default function Navbar({ logo }: NavbarProps) {
             </div>
           ))}
         </div>
-        <div id="right">
+        <div id="right" className='scale-75'>
           <Link to="/shoot">
             <Button primary>Shoot Us Project</Button>
           </Link>
