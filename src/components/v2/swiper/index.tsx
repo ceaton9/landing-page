@@ -6,28 +6,33 @@
 import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
+import { isEqual } from 'lodash'
+
 import ContentProject from '@components/v2/contentProject'
 
 import sayurEcommerce from '@assets/webp/sayur-ecommerce_1x.webp'
-import { isEqual } from 'lodash'
+import useResponsive from '@hooks/useResponsive'
 
 /**
- * 
- * @returns 
- * 
+ *
+ * @returns
+ *
  * Mobile
  * 2 / 1.5
- * 
+ *
  * Web
  * 75 / 2
  */
 
 export default function Swipper() {
+  const { sm } = useResponsive()
+
   const [currentIndex, setCurrentIndex] = useState(0)
+
   return (
     <Swiper
-      spaceBetween={75}
-      slidesPerView={2}
+      spaceBetween={sm ? 2 : 75}
+      slidesPerView={sm ? 1.5 : 2}
       centeredSlides
       onActiveIndexChange={(i: any) => setCurrentIndex(i.realIndex)}
     >

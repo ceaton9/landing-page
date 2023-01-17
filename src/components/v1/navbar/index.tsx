@@ -11,12 +11,14 @@ import NavbarMenu from '@components/v2/navbarMenu'
 
 import './style.css'
 import BurgerMenu from '@components/v2/burgerMenu'
+import useResponsive from '@hooks/useResponsive'
 
 interface NavbarProps {
   logo: string
 }
 
 export default function Navbar({ logo }: NavbarProps) {
+  const { sm } = useResponsive()
   return (
     <>
       <section
@@ -24,8 +26,7 @@ export default function Navbar({ logo }: NavbarProps) {
         className="flex items-center justify-between px-8 sm:px-24 md:px-24 pt-12 pb-6"
       >
         <Logo logo={logo} />
-        {/* <NavbarMenu /> */}
-        <BurgerMenu />
+        {sm ? <BurgerMenu /> : <NavbarMenu />}
       </section>
       <div className="pb-6 px-8 sm:px-24 md:px-24">
         <LineBreak />

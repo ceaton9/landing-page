@@ -14,6 +14,7 @@ const config: GatsbyConfig = {
   plugins: [
     'gatsby-plugin-image',
     'gatsby-plugin-postcss',
+    'gatsby-plugin-breakpoints',
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {

@@ -8,6 +8,7 @@ import React from 'react'
 import HeaderSection from '@components/v1/headerSection'
 import ProductCard from '@components/v1/cards/productCard'
 import { uniqueId } from 'lodash'
+import useResponsive from '@hooks/useResponsive'
 
 const dummyItem = [
   {
@@ -37,6 +38,8 @@ const dummyItem = [
 ]
 
 export default function OurProducts() {
+  const { sm } = useResponsive()
+
   return (
     <div className="our-products">
       <section
@@ -44,14 +47,19 @@ export default function OurProducts() {
         about="our-products"
         className="mb-20 space-y-12 mt-20"
       >
-        <div className="px-24">
+        <div className="px-8 md:px-24">
           <HeaderSection title="Our Product" isHaveReadmore href="/" />
         </div>
-        <div className="flex gap-10 px-24">
-          {dummyItem.map(({ category, id, price, title, to, image }) => (
-            <ProductCard {...{ category, image, price, title, to }} key={id} />
-          ))}
-        </div>
+        {sm ? undefined : (
+          <div className="flex gap-10 px-24">
+            {dummyItem.map(({ category, id, price, title, to, image }) => (
+              <ProductCard
+                {...{ category, image, price, title, to }}
+                key={id}
+              />
+            ))}
+          </div>
+        )}
       </section>
     </div>
   )
