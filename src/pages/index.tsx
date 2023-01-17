@@ -5,7 +5,6 @@
 
 import React from 'react'
 
-import { LANG } from '@utils/lang'
 import Footer from '@components/v1/footer'
 import Hero from '@components/v1/hero/primary'
 import Navbar from '@components/v1/navbar'
@@ -14,15 +13,18 @@ import SEO from '@components/v1/seo'
 import Services from '@components/v1/services'
 import Testimonials from '@components/v1/testimonials'
 import OurProducts from '@components/v2/ourProducts'
+import useContent from '@hooks/useContent'
 
 export default function Index() {
+  const { hero, navbar } = useContent()
+
   return (
     <SEO>
-      <Navbar logo={LANG.NAVBAR.LOGO} />
+      <Navbar logo={navbar} />
       <Hero
-        headline={LANG.HEADLINE}
-        miniHeadline={LANG.MINI_HEADLINE}
-        headlineDescription={LANG.HEADLINE_DESC}
+        headline={hero.HEADLINE}
+        miniHeadline={hero.MINI_HEADLINE}
+        headlineDescription={hero.HEADLINE_DESC}
       />
       <Services />
       <OurProject />
