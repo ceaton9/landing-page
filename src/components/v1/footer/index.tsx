@@ -15,11 +15,11 @@ import LineBreak from '@components/v1/lineBreak'
 
 export default function Footer() {
   return (
-    <div className="px-24">
-      <div className="mt-24 h-52 flex">
-        <div className="w-2/6">
+    <div className="px-8 md:px-24">
+      <div className="mt-24 md:h-52 flex flex-col md:flex-row">
+        <div className="mb-10 md:mb-10 md:w-2/6">
           <h2 className="gradient-text text-2xl inline">{LANG.NAVBAR.LOGO}</h2>
-          <p className="text-white opacity-70 font-ligh mt-6">
+          <p className="text-white opacity-70 font-light mt-6">
             Wanna build something great together?
           </p>
           <div className="flex items-center gap-2 py-4">
@@ -61,7 +61,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="w-4/6 flex">
+        <div className="grid grid-rows-2 grid-flow-col gap-10 md:w-4/6 md:flex">
           {FOOTER.FOOTER_ITEMS.map((items, idx) => (
             <div key={idx} className="w-1/4">
               <h5 className="gradient-text text-start inline">{items.TITLE}</h5>
@@ -69,7 +69,7 @@ export default function Footer() {
                 {items.LINKS.map((link, idx) => (
                   <li
                     key={idx}
-                    className="text-white opacity-70 font-light hover:opacity-100 transition duration-500 ease-out hover:ease-in"
+                    className="text-sm opacity-50 md:text-base text-white md:opacity-70 font-light hover:opacity-100 transition duration-500 ease-out hover:ease-in"
                   >
                     <a href={link.url}>{link.label}</a>
                   </li>
@@ -80,7 +80,7 @@ export default function Footer() {
         </div>
       </div>
       <LineBreak />
-      <p className="font-light text-white opacity-70 text-center py-8">
+      <p className="text-sm md:text-base font-light text-white opacity-70 text-center py-8">
         Copyright {new Date().getFullYear()} GRV All Right Reserved
       </p>
     </div>

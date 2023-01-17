@@ -11,6 +11,17 @@ import ContentProject from '@components/v2/contentProject'
 import sayurEcommerce from '@assets/webp/sayur-ecommerce_1x.webp'
 import { isEqual } from 'lodash'
 
+/**
+ * 
+ * @returns 
+ * 
+ * Mobile
+ * 2 / 1.5
+ * 
+ * Web
+ * 75 / 2
+ */
+
 export default function Swipper() {
   const [currentIndex, setCurrentIndex] = useState(0)
   return (
