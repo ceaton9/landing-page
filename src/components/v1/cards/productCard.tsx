@@ -23,9 +23,9 @@ export default function ProductCard({
   to = '/',
 }: ProductCardProps) {
   return (
-    <div className="card-bg w-96 p-6">
+    <div className="card-bg flex items-stretch md:w-96 p-6 overflow-hidden">
       <Link to={to}>
-        <div className="p-40  gentle-grey relative">
+        <div className="p-32 md:p-40 gentle-grey relative">
           <div className="w-28 p-3 absolute flex justify-center gradient-color bottom-3 right-3">
             <span className="text-sm text-white">Rp {price}</span>
           </div>

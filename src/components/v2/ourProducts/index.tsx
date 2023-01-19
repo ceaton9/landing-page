@@ -9,6 +9,7 @@ import HeaderSection from '@components/v1/headerSection'
 import ProductCard from '@components/v1/cards/productCard'
 import useResponsive from '@hooks/useResponsive'
 import useContent from '@hooks/useContent'
+import Mobile from '@components/v2/ourProducts/mobile'
 
 export default function OurProducts() {
   const { sm } = useResponsive()
@@ -24,7 +25,9 @@ export default function OurProducts() {
         <div className="px-8 md:px-24">
           <HeaderSection title="Our Product" isHaveReadmore href="/" />
         </div>
-        {sm ? undefined : (
+        {sm ? (
+          <Mobile />
+        ) : (
           <div className="flex gap-10 px-24">
             {ourProduct.map(({ category, id, price, title, to, image }) => (
               <ProductCard

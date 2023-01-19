@@ -14,6 +14,7 @@ import uiUXDesign from '@assets/ui-ux-design.png'
 import useResponsive from '@hooks/useResponsive'
 import useContent from '@hooks/useContent'
 import { toHTMLHypen } from '@utils/helpers'
+import Mobile from '@components/v1/services/mobile'
 
 const imageList = [mobileDevelopment, uiUXDesign, illustrationService]
 
@@ -29,7 +30,9 @@ export default function Services() {
     >
       <HeaderSection title="The Service we do," />
 
-      {sm ? undefined : (
+      {sm ? (
+        <Mobile />
+      ) : (
         <div className="flex gap-10 h-[538px] mt-6">
           {services.map(({ description, id, title }, index) => (
             <ServiceCard

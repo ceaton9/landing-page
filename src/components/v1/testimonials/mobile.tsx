@@ -13,7 +13,7 @@ export default function Mobile() {
   const { testimonials } = useContent()
 
   return (
-    <Swiper spaceBetween={2} slidesPerView={1.5} centeredSlides>
+    <Swiper spaceBetween={1} slidesPerView={1} centeredSlides>
       {testimonials.map(
         ({ avatar, id, jobTitle, title, description, rating }, i) => (
           <SwiperSlide>
