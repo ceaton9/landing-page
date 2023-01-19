@@ -4,7 +4,114 @@
     "MINI_HEADLINE": "BUSINESS BOOST",
     "HEADLINE_DESC": "We're bringing digital creators, Solving problems with unique and creative system for your business"
   },
+  "services": [
+    {
+      "ID": 1,
+      "TITLE": "Mobile & Development",
+      "DESCRIPTION": "We can make you a mobile application using tech stack as u request or we decide what to use to build your idea. It is guaranteed that we will satisfy your request with our skill and integrity."
+    },
+    {
+      "ID": 2,
+      "TITLE": "UI/UX Design",
+      "DESCRIPTION": "We can make you a mobile application using tech stack as u request or we decide what to use to build your idea. It is guaranteed that we will satisfy your request with our skill and integrity."
+    },
+    {
+      "ID": 3,
+      "TITLE": "Illustration",
+      "DESCRIPTION": "We can make you a mobile application using tech stack as u request or we decide what to use to build your idea. It is guaranteed that we will satisfy your request with our skill and integrity."
+    }
+  ],
   "navbar": {
     "LOGO": "GRV."
-  }
+  },
+  "ourProject": [
+    {
+      "ID": 1,
+      "TITLE": "Sayur E-Commerce",
+      "DESCRIPTION": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "IMAGE": ""
+    },
+    {
+      "ID": 2,
+      "TITLE": "Sayur E-Commerce",
+      "DESCRIPTION": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "IMAGE": ""
+    },
+    {
+      "ID": 3,
+      "TITLE": "Sayur E-Commerce",
+      "DESCRIPTION": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "IMAGE": ""
+    },
+    {
+      "ID": 4,
+      "TITLE": "Sayur E-Commerce",
+      "DESCRIPTION": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "IMAGE": ""
+    },
+    {
+      "ID": 5,
+      "TITLE": "Sayur E-Commerce",
+      "DESCRIPTION": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "IMAGE": ""
+    },
+    {
+      "ID": 6,
+      "TITLE": "Sayur E-Commerce",
+      "DESCRIPTION": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "IMAGE": ""
+    }
+  ],
+  "ourProduct": [
+    {
+      "ID": 1,
+      "TITLE": "Dailoz - Daily Activity Apps",
+      "CATEGORY": "web ui kit",
+      "PRICE": "200K",
+      "IMAGE": "",
+      "TO": "/"
+    },
+    {
+      "ID": 2,
+      "TITLE": "Beatuees - Women beauty cares marketplace UI KIT",
+      "CATEGORY": "illustration",
+      "PRICE": "200K",
+      "IMAGE": "",
+      "TO": "/"
+    },
+    {
+      "ID": 3,
+      "TITLE": "Lesta - Real Estate App UI KIT Design",
+      "CATEGORY": "app ui kit",
+      "PRICE": "200K",
+      "IMAGE": "",
+      "TO": "/"
+    }
+  ],
+  "testimonials": [
+    {
+      "ID": 1,
+      "AVATAR": "https://ui-avatars.com/api/?background=random&name=Sackie+Jones+Rio",
+      "TITLE": "Sackie Jones Rio",
+      "RATING": 4.8,
+      "JOB_TITLE": "Web Developer at Brizzy",
+      "DESCRIPTION": "Platform NFT marketplace terbaik yang miliknya pengguna mendapatkan banyak manfaat dan banyak bermunculan seperti pasar sebagus RAINFTB ini."
+    },
+    {
+      "ID": 2,
+      "AVATAR": "https://ui-avatars.com/api/?background=random&name=Sackie+Jones+Rio",
+      "TITLE": "Sackie Jones Rio",
+      "RATING": 4.8,
+      "JOB_TITLE": "Web Developer at Brizzy",
+      "DESCRIPTION": "Platform NFT marketplace terbaik yang miliknya pengguna mendapatkan banyak manfaat dan banyak bermunculan seperti pasar sebagus RAINFTB ini."
+    },
+    {
+      "ID": 3,
+      "AVATAR": "https://ui-avatars.com/api/?background=random&name=Sackie+Jones+Rio",
+      "TITLE": "Sackie Jones Rio",
+      "RATING": 4.8,
+      "JOB_TITLE": "Web Developer at Brizzy",
+      "DESCRIPTION": "Platform NFT marketplace terbaik yang miliknya pengguna mendapatkan banyak manfaat dan banyak bermunculan seperti pasar sebagus RAINFTB ini."
+    }
+  ]
 }

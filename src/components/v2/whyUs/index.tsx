@@ -3,10 +3,10 @@
  * @copyright © All rights reserved. Groove Studio 2023
  */
 
-import { toLower, join, split } from 'lodash'
 import React, { useMemo } from 'react'
 
 import OurFeature from '@components/v2/ourFeature'
+import { toHTMLHypen } from '@utils/helpers'
 
 interface WhyUsProps {
   title: string
@@ -22,7 +22,7 @@ interface WhyUsProps {
  */
 export default function WhyUs({ description, image, title }: WhyUsProps) {
   const altImageMemo = useMemo(
-    () => toLower(join(split(title, ' '), '-')), // memento function
+    () => toHTMLHypen(title), // memento function
     [title]
   )
 

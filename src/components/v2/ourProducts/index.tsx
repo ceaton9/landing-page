@@ -7,38 +7,12 @@ import React from 'react'
 
 import HeaderSection from '@components/v1/headerSection'
 import ProductCard from '@components/v1/cards/productCard'
-import { uniqueId } from 'lodash'
 import useResponsive from '@hooks/useResponsive'
-
-const dummyItem = [
-  {
-    id: uniqueId(),
-    title: 'Dailoz - Daily Activity Apps',
-    category: 'web ui kit',
-    price: '200K',
-    image: '',
-    to: '/',
-  },
-  {
-    id: uniqueId(),
-    title: 'Beatuees - Women beauty cares marketplace UI KIT',
-    category: 'illustration',
-    price: '200K',
-    image: '',
-    to: '/',
-  },
-  {
-    id: uniqueId(),
-    title: 'Lesta - Real Estate App UI KIT Design',
-    category: 'app ui kit',
-    price: '200K',
-    image: '',
-    to: '/',
-  },
-]
+import useContent from '@hooks/useContent'
 
 export default function OurProducts() {
   const { sm } = useResponsive()
+  const { ourProduct } = useContent()
 
   return (
     <div className="our-products">
@@ -52,7 +26,7 @@ export default function OurProducts() {
         </div>
         {sm ? undefined : (
           <div className="flex gap-10 px-24">
-            {dummyItem.map(({ category, id, price, title, to, image }) => (
+            {ourProduct.map(({ category, id, price, title, to, image }) => (
               <ProductCard
                 {...{ category, image, price, title, to }}
                 key={id}

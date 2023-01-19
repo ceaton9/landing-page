@@ -27,7 +27,7 @@ export default function HeaderSection({
         {isHaveReadmore && (
           <Link to={href!}>
             <div className="flex justify-between items-center">
-              <h3 className="text-white text-xs md:text-l gradient-text">See More</h3>
+              <h3 className="text-white text-xs md:text-lg gradient-text">See More</h3>
               <div className="ml-1 md:ml-3 scale-50 md:scale-75">
                 <ChevIcon />
               </div>

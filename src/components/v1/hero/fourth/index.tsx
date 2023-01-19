@@ -3,8 +3,8 @@
  * @copyright © All rights reserved. Groove Studio 2023
  */
 
-import { toLower, join, split } from 'lodash'
 import React, { useMemo } from 'react'
+import { toHTMLHypen } from '@utils/helpers'
 
 interface FourthHeroProps {
   title: string
@@ -13,7 +13,7 @@ interface FourthHeroProps {
 
 export default function FourthHero({ image, title }: FourthHeroProps) {
   const altImageMemo = useMemo(
-    () => toLower(join(split(title, ' '), '-')), // memento function
+    () => toHTMLHypen(title), // memento function
     [title]
   )
 

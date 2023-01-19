@@ -12,40 +12,36 @@ import mobileDevelopment from '@assets/mobile-development.png'
 import illustrationService from '@assets/illustration-service.png'
 import uiUXDesign from '@assets/ui-ux-design.png'
 import useResponsive from '@hooks/useResponsive'
+import useContent from '@hooks/useContent'
+import { toHTMLHypen } from '@utils/helpers'
+
+const imageList = [mobileDevelopment, uiUXDesign, illustrationService]
 
 export default function Services() {
   const { sm } = useResponsive()
+  const { services } = useContent()
 
   return (
-    <section id="services" about="services" className="px-8 md:px-24 mt-12 mb-6">
+    <section
+      id="services"
+      about="services"
+      className="px-8 md:px-24 mt-12 mb-6"
+    >
       <HeaderSection title="The Service we do," />
 
       {sm ? undefined : (
         <div className="flex gap-10 h-[538px] mt-6">
-          <ServiceCard
-            cardTitle="Mobile & Development"
-            cardImage={<img src={mobileDevelopment} alt="attachment-1" />}
-          >
-            We can make you a mobile application using tech stack as u request
-            or we decide what to use to build your idea. It is guaranteed that
-            we will satisfy your request with our skill and integrity.
-          </ServiceCard>
-          <ServiceCard
-            cardTitle="UI/UX Design"
-            cardImage={<img src={uiUXDesign} alt="attachment-2" />}
-          >
-            We can make you a mobile application using tech stack as u request
-            or we decide what to use to build your idea. It is guaranteed that
-            we will satisfy your request with our skill and integrity.
-          </ServiceCard>
-          <ServiceCard
-            cardTitle="Illustration"
-            cardImage={<img src={illustrationService} alt="attachment-3" />}
-          >
-            We can make you a mobile application using tech stack as u request
-            or we decide what to use to build your idea. It is guaranteed that
-            we will satisfy your request with our skill and integrity.
-          </ServiceCard>
+          {services.map(({ description, id, title }, index) => (
+            <ServiceCard
+              key={id}
+              cardTitle={title}
+              cardImage={
+                <img src={imageList[index]} alt={toHTMLHypen(title)} />
+              }
+            >
+              {description}
+            </ServiceCard>
+          ))}
         </div>
       )}
     </section>

@@ -3,29 +3,20 @@
  * @copyright © All rights reserved. Groove Studio 2023
  */
 
+import { isEmpty, isEqual } from 'lodash'
 import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-import { isEqual } from 'lodash'
 
 import ContentProject from '@components/v2/contentProject'
 
 import sayurEcommerce from '@assets/webp/sayur-ecommerce_1x.webp'
 import useResponsive from '@hooks/useResponsive'
-
-/**
- *
- * @returns
- *
- * Mobile
- * 2 / 1.5
- *
- * Web
- * 75 / 2
- */
+import useContent from '@hooks/useContent'
 
 export default function Swipper() {
   const { sm } = useResponsive()
+  const { ourProject } = useContent()
 
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -36,7 +27,7 @@ export default function Swipper() {
       centeredSlides
       onActiveIndexChange={(i: any) => setCurrentIndex(i.realIndex)}
     >
-      {new Array(5).fill(0).map((_, i) => (
+      {ourProject.map(({ description, title, image }, i) => (
         <SwiperSlide>
           <div
             className={`${
@@ -45,9 +36,9 @@ export default function Swipper() {
           >
             <ContentProject
               key={i}
-              title="Sayur E-Commerce"
-              description="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-              image={sayurEcommerce}
+              title={title}
+              description={description}
+              image={isEmpty(image) ? sayurEcommerce : image}
             />
           </div>
         </SwiperSlide>

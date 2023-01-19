@@ -3,6 +3,7 @@
  * @copyright © All rights reserved. Groove Studio 2023
  */
 
+import { toHTMLHypen } from '@utils/helpers'
 import { join, split, toLower } from 'lodash'
 import React, { useMemo } from 'react'
 
@@ -18,14 +19,16 @@ export default function ContentProject({
   title,
 }: ContentProjectProps) {
   const altImageMemo = useMemo(
-    () => toLower(join(split(title, ' '), '-')), // memento function
+    () => toHTMLHypen(title), // memento function
     [title]
   )
 
   return (
     <div className="content-project inline-block text-white flex justify-center items-center flex-col">
       <div className="md:px-10 flex justify-center items-center flex-col">
-        <h1 className="title text-2xl md:text-3xl text-center mb-2 md:mb-3">{title}</h1>
+        <h1 className="title text-2xl md:text-3xl text-center mb-2 md:mb-3">
+          {title}
+        </h1>
         <p className="description text-sm md:text-base opacity-75 mb-2 md:mb-3 text-center font-light">
           {description}
         </p>
