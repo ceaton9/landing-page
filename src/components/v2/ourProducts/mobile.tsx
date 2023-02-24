@@ -12,7 +12,7 @@ import useContent from '@hooks/useContent'
 export default function Mobile() {
   const { ourProduct } = useContent()
   return (
-    <Swiper spaceBetween={1} slidesPerView={1}>
+    <Swiper spaceBetween={1} slidesPerView={1.5}>
       {ourProduct.map(({ category, price, title, to, image }, i) => (
         <SwiperSlide>
           <ProductCard {...{ category, image, price, title, to }} key={i} />
