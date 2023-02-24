@@ -23,7 +23,7 @@ export default function Project() {
           title="See projects that we’ve done,
           and companies we’ve help"
           image={campingMan}
-          margin="-mt-24"
+          margin="-mt-24 mt-14"
         />
         <ProjectSection />
         <Footer />

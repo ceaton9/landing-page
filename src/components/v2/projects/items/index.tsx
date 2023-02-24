@@ -4,6 +4,7 @@
  */
 
 import Button from '@components/v1/button'
+import useResponsive from '@hooks/useResponsive'
 import { Link } from 'gatsby'
 import { toLower, join, split } from 'lodash'
 import React, { useCallback, useMemo } from 'react'
@@ -23,13 +24,14 @@ export default function ProjectItems({
   title,
   isOdd = false,
 }: ProjectItemsProps) {
+  const { sm } = useResponsive()
   const altImageMemo = useMemo(
     () => toLower(join(split(title, ' '), '-')), // memento function
     [title]
   )
 
   const imageRender = useMemo(
-    () => <img alt={altImageMemo} src={image} className="w-2/3" />,
+    () => <img alt={altImageMemo} src={image} className="lg:w-2/3" />,
     [altImageMemo, image]
   )
 
@@ -44,10 +46,11 @@ export default function ProjectItems({
   )
 
   return (
-    <div className="project-items px-24 mt-10">
-      <div className="flex text-white items-center justify-between">
-        {!isOdd ? imageRender : undefined}
-        <div className="description-wrapper flex flex-col w-2/4">
+    <div className="project-items px-8 lg:px-24 mt-20 lg:mt-10">
+      <div className="flex flex-col lg:flex-row text-white items-center justify-between">
+        {sm && imageRender}
+        {!sm && !isOdd ? imageRender : undefined}
+        <div className="description-wrapper flex flex-col lg:w-2/4">
           {descriptionRender('Project Name', title)}
           {descriptionRender('Duration', duration)}
           <div className="description">
@@ -60,13 +63,13 @@ export default function ProjectItems({
               ))}
             </ul>
           </div>
-          <div className="mt-5 scale-75 -ml-12">
+          <div className="mt-5 lg:scale-75 -ml-4 lg:-ml-12">
             <Link to="/shoot">
               <Button primary>See Detail</Button>
             </Link>
           </div>
         </div>
-        {isOdd ? imageRender : undefined}
+        {!sm && isOdd ? imageRender : undefined}
       </div>
     </div>
   )
