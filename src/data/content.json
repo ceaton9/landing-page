@@ -88,6 +88,80 @@
       "TO": "/"
     }
   ],
+  "allProducts": [
+    {
+      "ID": 1,
+      "TITLE": "Dailoz - Daily Activity Apps",
+      "CATEGORY": "web ui kit",
+      "PRICE": "200K",
+      "IMAGE": "",
+      "TO": "/"
+    },
+    {
+      "ID": 2,
+      "TITLE": "Beatuees - Women beauty cares marketplace UI KIT",
+      "CATEGORY": "illustration",
+      "PRICE": "200K",
+      "IMAGE": "",
+      "TO": "/"
+    },
+    {
+      "ID": 3,
+      "TITLE": "Lesta - Real Estate App UI KIT Design",
+      "CATEGORY": "app ui kit",
+      "PRICE": "200K",
+      "IMAGE": "",
+      "TO": "/"
+    },
+    {
+      "ID": 4,
+      "TITLE": "Dailoz - Daily Activity Apps",
+      "CATEGORY": "web ui kit",
+      "PRICE": "200K",
+      "IMAGE": "",
+      "TO": "/"
+    },
+    {
+      "ID": 5,
+      "TITLE": "Beatuees - Women beauty cares marketplace UI KIT",
+      "CATEGORY": "illustration",
+      "PRICE": "200K",
+      "IMAGE": "",
+      "TO": "/"
+    },
+    {
+      "ID": 6,
+      "TITLE": "Lesta - Real Estate App UI KIT Design",
+      "CATEGORY": "app ui kit",
+      "PRICE": "200K",
+      "IMAGE": "",
+      "TO": "/"
+    },
+    {
+      "ID": 7,
+      "TITLE": "Dailoz - Daily Activity Apps",
+      "CATEGORY": "web ui kit",
+      "PRICE": "200K",
+      "IMAGE": "",
+      "TO": "/"
+    },
+    {
+      "ID": 8,
+      "TITLE": "Beatuees - Women beauty cares marketplace UI KIT",
+      "CATEGORY": "illustration",
+      "PRICE": "200K",
+      "IMAGE": "",
+      "TO": "/"
+    },
+    {
+      "ID": 9,
+      "TITLE": "Lesta - Real Estate App UI KIT Design",
+      "CATEGORY": "app ui kit",
+      "PRICE": "200K",
+      "IMAGE": "",
+      "TO": "/"
+    }
+  ],
   "testimonials": [
     {
       "ID": 1,

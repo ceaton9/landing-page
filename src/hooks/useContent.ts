@@ -6,6 +6,15 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import { first } from 'lodash'
 
+interface ProductType {
+  id: number
+  title: string
+  category: string
+  price: string
+  to: string
+  image?: string
+}
+
 interface DataQuery {
   allDataJson: {
     edges: {
@@ -29,14 +38,8 @@ interface DataQuery {
           description: string
           image?: string
         }[]
-        ourProduct: {
-          id: number
-          title: string
-          category: string
-          price: string
-          to: string
-          image?: string
-        }[]
+        allProducts: ProductType[]
+        ourProduct: ProductType[]
         testimonials: {
           id: number
           avatar: string
@@ -83,6 +86,14 @@ export default function useContent() {
               image: IMAGE
               to: TO
             }
+            allProducts {
+              id: ID
+              title: TITLE
+              category: CATEGORY
+              price: PRICE
+              image: IMAGE
+              to: TO
+            }
             testimonials {
               id: ID
               avatar: AVATAR
@@ -103,6 +114,7 @@ export default function useContent() {
     services: first(data?.allDataJson.edges)?.node?.services!,
     ourProject: first(data?.allDataJson.edges)?.node?.ourProject!,
     ourProduct: first(data?.allDataJson.edges)?.node?.ourProduct!,
+    allProducts: first(data?.allDataJson.edges)?.node?.allProducts!,
     testimonials: first(data?.allDataJson.edges)?.node?.testimonials!,
   }
 }
